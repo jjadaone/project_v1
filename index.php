@@ -3,22 +3,51 @@
     include 'config/functions.php';
 ?>
 
+<div>
+    <div class ="burger-sidebar">
+        <button onclick="openMenu()">
+                &#9776;
+                </button>
+    </div>
+    <aside class="sidebar">
 
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+        <h3>Categories</h3>
+        <?php foreach ($category->getCategories() as $category): ?>
+        <ul>
+            <li><a href="category.php?id=<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></a></li>
+        </ul>
+        <?php endforeach; ?>
+        </ul>
+    </aside>
+</div>
+<div style="margin-top:50px;"></div>
+    <div>
+        <h1 class="title">CATEGORIES</h1>
+    </div>
+    <div class="categories">
 
-
-<div style="margin-top:500px;">
-    <?php foreach ($category->getCategories() as $category): ?>
-    <ul>
-        <li><a href="category.php?id=<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></a></li>
-    </ul>
-    <?php endforeach; ?>
+   
+                <div class ="row">
+                    <div class="col-3">
+                        <img src="assets/images/category-1.jpg">
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/category-2.jpg" >
+                    </div>
+                    <div class="col-3">
+                        <img src="assets/images/category-3.jpg" >
+                    </div>
+                </div>
+            </div>
+        </div>
 </div>
 
 
 <div class="small-container">
     <div>
         <h1 class="title">FEAUTURED PRODUCTS</h1>
-        <?php if ($_SESSION) echo $_SESSION['username']; ?>
         <div class="row">
             <?php foreach ($product->getProducts() as $product): ?>
             <div class="col-4">
@@ -43,6 +72,15 @@
         </div>
     </div>
 </div>
+<script>
+    function openMenu() {
+      document.querySelector(".sidebar").classList.add("open");
+    }
+    function closeMenu() {
+      document.querySelector(".sidebar").classList.remove("open")
+    }
+  
+  </script>
 
 <?php include 'includes/footer.php'; ?>
 
