@@ -9,19 +9,19 @@
         if(isset($_POST['address'],$_POST['city'],$_POST['zipcode']) && !empty($_POST['address']) && !empty($_POST['city']) && !empty($_POST['zipcode']))
         {
       
-               //validate_input is a custom function
-               //you can find it in helpers.php file
-        
-                $sql = 'insert into orders (address, city,  zipcode, order_status,created_at, updated_at) values (address, :city, :zipcode, :order_status,:created_at, :updated_at)';
-                $statement = $db->prepare($sql);
-                $params = [
-                    'address' => $address,
-                    'city' => $city,
-                    'zipcode' => $zipcode,
-                    'order_status' => 'confirmed',
-                    'created_at'=> date('Y-m-d H:i:s'),
-                    'updated_at'=> date('Y-m-d H:i:s')
-                ];
+          $params = [
+            'cart_id' => 
+            'user_id' => $_SESSION['id'],
+            'address' => $address,
+            'city' => $city,
+            'zipcode' => $zipcode,
+            'order_status' => 'confirmed',
+            'created_at'=> date('Y-m-d H:i:s'),
+            'updated_at'=> date('Y-m-d H:i:s')
+          ];
+                
+          $order->addOrder($params);
+
 
                 $statement->execute($params);
                 if($statement->rowCount() == 1)
@@ -67,50 +67,7 @@
                         exit();
                     }
                 }
-                else
-                {
-                    $errorMsg[] = 'Unable to save your order. Please try again';
-                }
               
-        }
-        else
-        {
-            $errorMsg = [];
-
-            if(!isset($_POST['address']) || empty($_POST['address']))
-            {
-                $errorMsg[] = 'Address is required';
-            }
-            else
-            {
-                $addressValue = $_POST['address'];
-            }
-
-            if(!isset($_POST['city']) || empty($_POST['city']))
-            {
-                $errorMsg[] = 'city is required';
-            }
-            else
-            {
-                $cityValue = $_POST['city'];
-            }
-
-    
-            if(!isset($_POST['zipcode']) || empty($_POST['zipcode']))
-            {
-                $errorMsg[] = 'Zipcode is required';
-            }
-            else
-            {
-                $zipCodeValue = $_POST['zipcode'];
-            }
-
-
-            if(isset($_POST['address2']) || !empty($_POST['address2']))
-            {
-                $address2Value = $_POST['address2'];
-            }
-
         }
     }
 ?>
