@@ -36,6 +36,9 @@
             </td>
         </table>
     </form>
+                 <a href="checkout.php">
+					<button class="btn btn-primary btn-lg float-right">Checkout</button>
+				</a>
                 
 </div>
 
