@@ -25,6 +25,20 @@ class Review {
         return $resultArray;
     }
 
+    public function addReview($data) {
+        $product_id = $this->db->con->real_escape_string($data['product_id']);
+        $rating = $this->db->con->real_escape_string($data['rating']);
+        $review = $this->db->con->real_escape_string($data['review']);
+
+        $result = $this->db->con->query("
+            INSERT INTO reviews (product_id, rating, review) VALUES('$product_id', '$rating', '$review')
+        ");
+
+        if ($result) echo 'success';
+        else echo 'fail review';
+
+    }
+
 }
 
 
