@@ -25,7 +25,6 @@ class Order {
         if ($result) echo 'success order';
         else echo 'fail order';
 
-
     }
 
 

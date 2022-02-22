@@ -10,7 +10,7 @@
         {
       
           $params = [
-            'cart_id' => 
+            // 'cart_id' => 
             'user_id' => $_SESSION['id'],
             'address' => $address,
             'city' => $city,

@@ -26,6 +26,8 @@ class User {
     }
 
     public function register($data) {
+        $first_name = $this->db->con->real_escape_string($data['first_name']);
+        $last_name = $this->db->con->real_escape_string($data['last_name']);
         $username = $this->db->con->real_escape_string($data['username']);
         $password = $this->db->con->real_escape_string($data['password']);
         $email = $this->db->con->real_escape_string($data['email']);
@@ -33,8 +35,8 @@ class User {
         $gender = $this->db->con->real_escape_string($data['gender']);
 
         $result = $this->db->con->query("
-            INSERT INTO users(username, password, email, birthdate, gender) 
-            VALUES ('$username', '$password', '$email', '$birthdate', '$gender')
+            INSERT INTO users(first_name, last_name, username, password, email, birthdate, gender) 
+            VALUES ('$first_name', '$last_name', '$username', '$password', '$email', '$birthdate', '$gender')
         ");
 
         if ($result) return true;
