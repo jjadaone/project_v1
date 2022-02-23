@@ -3,7 +3,7 @@
     include 'config/functions.php';
 ?>
 
-<div>
+<!-- <div>
     <div class ="burger-sidebar">
         <button onclick="openMenu()">
                 &#9776;
@@ -21,8 +21,20 @@
         <?php endforeach; ?>
         </ul>
     </aside>
-</div>
-<div style="margin-top:50px;"></div>
+</div> -->
+<div class="header">
+        <div class="container">
+            <div class="row">
+            
+                <div class="col-2">
+                    <img src="assets/images/image1.png" alt="img" height="950px">
+
+                </div>
+            </div>
+        </div>
+    </div> 
+
+
     <div>
         <h1 class="title">CATEGORIES</h1>
     </div>
@@ -73,13 +85,21 @@
     </div>
 </div>
 <script>
-    function openMenu() {
-      document.querySelector(".sidebar").classList.add("open");
-    }
-    function closeMenu() {
-      document.querySelector(".sidebar").classList.remove("open")
-    }
-  
+    //     function openMenu() {
+    //   document.querySelector(".sidebar").classList.add("open");
+    // }
+    // function closeMenu() {
+    //   document.querySelector(".sidebar").classList.remove("open")
+    // }
+
+    $(window).scroll(function(){
+         if($(window).scrollTop()){
+             $("nav").addClass("black");
+         }
+         else{
+             $("nav").removeClass("black");
+         }
+     })
   </script>
 
 <?php include 'includes/footer.php'; ?>
