@@ -27,11 +27,12 @@ class Review {
 
     public function addReview($data) {
         $product_id = $this->db->con->real_escape_string($data['product_id']);
+        $user_id = $this->db->con->real_escape_string($data['user_id']);
         $rating = $this->db->con->real_escape_string($data['rating']);
         $review = $this->db->con->real_escape_string($data['review']);
 
         $result = $this->db->con->query("
-            INSERT INTO reviews (product_id, rating, review) VALUES('$product_id', '$rating', '$review')
+            INSERT INTO reviews (product_id, user_id, rating, review) VALUES('$product_id', '$user_id', '$rating', '$review')
         ");
 
         if ($result) echo 'success';
