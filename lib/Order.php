@@ -29,6 +29,20 @@ class Order {
         else return false;
     }
 
+    public function updateOrder($data) {
+
+        $total = $data['total'];
+        $order_id = $data['order_id'];
+        
+        $result = $this->db->con->query("
+            UPDATE orders set total_price = $total WHERE order_id = $order_id
+        ");
+
+        if ($result) echo 'success update ';
+        else echo 'fail update';
+
+    }
+
     
 
 

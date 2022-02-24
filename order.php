@@ -22,26 +22,36 @@
           $order->addOrder($params);
 
           if ($order->addOrder($params) == true) {
+               
             $order_id = $db->con->insert_id;
-
             $totalPrice = 0;
 
             foreach($cart->getUserCart($_SESSION['id']) as $cart) {
               
               $totalPrice += $cart['total'];
 
-              $orderDetails = [
+              $orderDetailsData = [
                 'order_id' => $order_id,
                 'product_id' => $cart['product_id'],
                 'quantity' => $cart['quantity'],
                 'total_price' => $cart['total_price'],
               ];
 
-
-
-
-
+              $orderDetails->addOrderDetails($orderDetailsData);
             }
+
+            $updateOrder = [
+              'total' => $totalPrice,
+              'order_id' => $order_id
+            ];
+
+            $order->updateOrder($updateOrder);
+
+
+
+
+
+
             
 
 
@@ -101,7 +111,7 @@
                 //     }
                 // }
               
-        
+        }
     }
 ?>
 <div class="row mt-3">
