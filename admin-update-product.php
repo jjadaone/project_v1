@@ -19,7 +19,7 @@
       <tbody>
         
         <tr>
-        <?php foreach ($product->getProducts($_GET['id']) as $product): ?>
+        <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
           <th scope="row"><?php echo $product['product_id']; ?></th>
           <td><input type="text" name="image value="<?php echo $product['image']; ?>"></td>
           

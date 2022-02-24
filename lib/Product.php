@@ -8,7 +8,7 @@ class Product {
     }
 
     public function getProducts($category_id=null) {
-
+       
         if ($category_id == null) {
             $result = $this->db->con->query("SELECT * FROM products");
         } else {
