@@ -13,6 +13,7 @@
     require $_SERVER['DOCUMENT_ROOT'] . '/project_v1' . '/lib/Category.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/project_v1' . '/lib/Review.php';
     require $_SERVER['DOCUMENT_ROOT'] . '/project_v1' . '/lib/Order.php';
+    require $_SERVER['DOCUMENT_ROOT'] . '/project_v1' . '/lib/OrderDetails.php';
 
 
     $db = new Database;
@@ -22,6 +23,6 @@
     $category = new Category($db);
     $review = new Review($db);
     $order = new Order($db);
-    
+    $orderDetails = new OrderDetails($db);
     
 ?>
