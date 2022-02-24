@@ -9,6 +9,7 @@ class Order {
 
     public function addOrder($data) {
         
+        $user_id = $data['user_id'];
         $address = $data['address'];
         $city = $data['city'];
         $zipcode = $data['zipcode'];
@@ -16,16 +17,19 @@ class Order {
         $created_at = $data['created_at'];
         $updated_at = $data['updated_at'];
 
+        // print_r($data);
+
         $result = $this->db->con->query("
             insert into 
-            orders (address, city,  zipcode, order_status,created_at, updated_at) 
-            values ('$address', '$city', '$zipcode', '$order_status', '$created_at', '$updated_at')
+            orders (user_id, address, city,  zipcode, order_status, created_at, updated_at) 
+            values ('$user_id', '$address', '$city', '$zipcode', '$order_status', '$created_at', '$updated_at')
         ");
 
-        if ($result) echo 'success order';
-        else echo 'fail order';
-
+        if ($result) return true;
+        else return false;
     }
+
+    
 
 
 }
