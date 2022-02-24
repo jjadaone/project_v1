@@ -14,10 +14,6 @@ class Product {
         } else {
             $result = $this->db->con->query("SELECT * FROM products WHERE category_id=$category_id");
         }
-
-
-        
-        
         $resultArray = array();
 
         while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
