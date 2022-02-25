@@ -35,15 +35,20 @@ class Product {
         return $resultArray;
     }
 
-    public function addProduct($query) {
-        $result = $this->db->con->query($query);
-        
-        if ($result) {
-            echo 'Product created successfully.';
+    public function addProduct($data) {
+        $product_name = $this->db->con->real_escape_string($data['product_name']);
+        $category_id = $this->db->con->real_escape_string($data['category_id']);
+        $price = $this->db->con->real_escape_string($data['price']);
+        $quantity = $this->db->con->real_escape_string($data['quantity']);
+        $description = $this->db->con->real_escape_string($data['description']);
+        // $image = $this->db->con->real_escape_string($data['image']);
 
-        } else {
-            echo 'Error creating the product.';
-        }
+        $result = $this->db->con->query("
+            INSERT INTO products(product_name, category_id, price, quantity, description) 
+            VALUES ('$product_name', '$category_id', '$price', '$quantity', '$description')
+        ");
+
+        if ($result) return true;
     }
 
     public function deleteProduct($id) {

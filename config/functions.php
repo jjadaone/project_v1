@@ -24,5 +24,4 @@
     $review = new Review($db);
     $order = new Order($db);
     $orderDetails = new OrderDetails($db);
-    
 ?>

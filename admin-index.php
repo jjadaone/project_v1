@@ -2,47 +2,8 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
-<div style="margin: 100px"></div>
-
-<form >
-    <table class="table table-striped table-dark">
-      <thead>
-      <th>Create New Product</th>
-        <tbody>
-                <th scope="row"><label for="new-product">New Product</label></th>
-                <td><input type="text" name="product_id"></td>
-                </tr>
-                <tr>
-                <th scope="row"><label for="category">Category</label></th>
-                <td><input type="text" name="category_id"></td>
-                </tr>
-                <tr>
-                <th scope="row"><label for="price">Price</label></th>
-                <td><input type="text" name="price"></td>
-                </tr>
-                <tr>
-                <th scope="row"><label for="quantity">Quantity</label></th>
-                <td><input type="text" name="quantity"></td>
-                </tr>
-                <tr>
-                <th scope="row"><label for="description">Description</label></th>
-                <td><textarea></textarea></td>
-                </tr>
-                <tr>
-                <th scope="row"><label for="image">Upload Image</label></th>
-                <td><input type="file" name="txtFile" id="txtFile"></td>
-                </tr>
-                <tr>
-                <th scope="row"></th>
-                <td><button type="submit" name="submit">Submit</button> </td>
-                </tr>
-                
-        </tbody>
-      </thead>
-    </table>
-</form>
 <div style="margin: 55px"></div>
-
+  <div class="container">
     <table class="table table-striped table-dark">
       <thead>
         <tr>
@@ -77,7 +38,7 @@
       </tbody>
     </table>
     
-
+  </div>
 
 <?php include 'includes/footer.php'; ?>
 
