@@ -20,6 +20,8 @@
     <link href ='assets/css/input.css' type ='text/css' rel='stylesheet'/>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
@@ -39,21 +41,24 @@
                     if ($_SESSION) {
                         if ($_SESSION['id']) {
                             echo '<li><a href="?action=logout">Logout</a></li>';
+                            
                             if (isset($_GET['action'])) {
                                 session_destroy();
-                                header("location:index.php");
+                            
                             }
+                            echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
                         } 
-                    } else {
+                    }
+                    else {
                         echo '<li><a href="login.php">Login</a></li>';
                         echo '<li><a href="register.php">Register</a></li>';
+                        
                     }
                     
+                    
                     ?>    
-                        <div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>
-                        <div class="cart-nav">
-                        <div class="item-numb"><li><a><?php echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li></div>
-                        </div>
+                  <li  class="item-numb"><a><?php echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li>
+
                </ul>
         </nav>
     </div>  

@@ -24,7 +24,7 @@
     </aside>
 </div> -->
 <div class="header">
-        <div class="container">
+    <div class="container">
             <div class="row">
             
                 <div class="col-2">
@@ -33,10 +33,10 @@
                 </div>
             </div>
         </div>
-    </div> 
+</div> 
 
 
-    <div>
+    <div class="container">
         <h1 class="title">CATEGORIES</h1>
     </div>
     <div class="categories">
@@ -55,16 +55,18 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
 
 
-<div class="small-container">
-    <div>
-        <h1 class="title">FEAUTURED PRODUCTS</h1>
+
+        
+        
+    <div class="container">
+    <div class="title"><h1 >FEAUTURED PRODUCTS</h1></div>
         <div class="row">
             <?php foreach ($product->getProducts() as $product): ?>
             <div class="col-4">
-                <img src="images/product-1.jpg" alt="">
+                <img src="assets/images/product-1.jpg" alt="">
                 <h4><?php echo $product['product_name']; ?></h4>
                 <div class ="rating">
                     <i class="fa fa-star"></i>
@@ -78,7 +80,8 @@
                     </div>
                     <div>
                         <a href="single-product.php?id=<?php echo $product['product_id']; ?>"><button >VIEW</button></a>
-                        <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button class="cart-btn">ADD TO CART</button></a>
+                        <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
+                        
                     </div>
             </div>
             <?php endforeach; ?>
