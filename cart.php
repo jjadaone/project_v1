@@ -17,7 +17,7 @@
                 </tr>
             </thead>
 
-            <?php foreach ($cart->getUserCart(1) as $cart): ?>
+            <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
             <tbody>
                 <tr>
                     <td><img style="width: 200px; height: 100px;" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="no image"></td>

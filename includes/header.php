@@ -4,7 +4,7 @@
     // { 
     //     session_start(); 
     // } 
-
+    // include 'config/functions.php';
     !isset($_SESSION) ? session_start() : null;
 
 ?> 
@@ -52,7 +52,7 @@
                     ?>    
                         <div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>
                         <div class="cart-nav">
-                        <div class="item-numb"><li><a>0</a></li></div>
+                        <div class="item-numb"><li><a><?php echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li></div>
                         </div>
                </ul>
         </nav>

@@ -19,7 +19,7 @@ class OrderDetails {
 
         $result = $this->db->con->query("
             insert into 
-            orders (order_id, product_id, quantity, total_price) 
+            order_details (order_id, product_id, quantity, total_price) 
             values ('$order_id', '$product_id', '$quantity', '$total_price')
         ");
 

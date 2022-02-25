@@ -1,6 +1,7 @@
 <?php 
-    include 'includes/header.php';
     include 'config/functions.php';
+    include 'includes/header.php';
+    
 ?>
 
 <!-- <div>

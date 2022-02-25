@@ -21,20 +21,20 @@
 
           $order->addOrder($params);
 
-          if ($order->addOrder($params) == true) {
+          if ($db->con->insert_id) {
                
             $order_id = $db->con->insert_id;
             $totalPrice = 0;
 
-            foreach($cart->getUserCart($_SESSION['id']) as $cart) {
+            foreach($cart->getUserCart($_SESSION['id']) as $cart_item) {
               
-              $totalPrice += $cart['total'];
+              $totalPrice += $cart_item['total'];
 
               $orderDetailsData = [
                 'order_id' => $order_id,
-                'product_id' => $cart['product_id'],
-                'quantity' => $cart['quantity'],
-                'total_price' => $cart['total_price'],
+                'product_id' => $cart_item['product_id'],
+                'quantity' => $cart_item['quantity'],
+                'total_price' => $cart_item['total'],
               ];
 
               $orderDetails->addOrderDetails($orderDetailsData);
@@ -47,70 +47,10 @@
 
             $order->updateOrder($updateOrder);
 
+            $cart->clearUserCart($_SESSION['id']);
+            header("Location: index.php");
 
-
-
-
-
-            
-
-
-
-
-
-
-
-
-
-          }
-          
-            
-
-                // $statement->execute($params);
-                // if($statement->rowCount() == 1)
-                // {
-                    
-                //     $getOrderID = $db->lastInsertId();
-
-                //     if(isset($_SESSION['cart_items']) || !empty($_SESSION['cart_items']))
-                //     {
-                //         $sqlDetails = 'insert into order_details (order_id, product_id, product_name, product_price, qty, total_price) values(:order_id,:product_id,:product_name,:product_price,:qty,:total_price)';
-                //         $orderDetailStmt = $db->prepare($sqlDetails);
-
-                //         $totalPrice = 0;
-                //         foreach($_SESSION['cart_items'] as $item)
-                //         {
-                //             $totalPrice+=$item['total_price'];
-
-                //             $paramOrderDetails = [
-                //                 'order_id' =>  $getOrderID,
-                //                 'product_id' =>  $item['product_id'],
-                //                 'product_name' =>  $item['product_name'],
-                //                 'product_price' =>  $item['product_price'],
-                //                 'qty' =>  $item['qty'],
-                //                 'total_price' =>  $item['total_price']
-                //             ];
-
-                //             $orderDetailStmt->execute($paramOrderDetails);
-                //         }
-                        
-                //         $updateSql = 'update orders set total_price = :total where id = :id';
-
-                //         $rs = $db->prepare($updateSql);
-                //         $prepareUpdate = [
-                //             'total' => $totalPrice,
-                //             'id' =>$getOrderID
-                //         ];
-
-                //         $rs->execute($prepareUpdate);
-                        
-                //         unset($_SESSION['cart_items']);
-                //         $_SESSION['confirm_order'] = true;
-                //         header('location:thank-you.php');
-                //         exit();
-                //     }
-                // }
-              
+          }              
         }
     }
 ?>

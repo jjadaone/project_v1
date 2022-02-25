@@ -107,6 +107,16 @@ class Cart {
         else return false;
     }
 
+    public function clearUserCart($user_id) {
+
+        $result = $this->db->con->query("
+            DELETE FROM `carts` WHERE user_id=$user_id
+        ");
+
+        if ($result) echo 'Cart cleared.';
+        else echo 'clear failed';
+    }
+
     
     public function countCart($user_id) {
 
