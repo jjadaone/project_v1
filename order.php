@@ -14,7 +14,7 @@
             'address' => $_POST['address'],
             'city' => $_POST['city'],
             'zipcode' => $_POST['zipcode'],
-            'order_status' => 'confirmed',
+            'order_status' => 'ordered',
             'created_at'=> date('Y-m-d H:i:s'),
             'updated_at'=> date('Y-m-d H:i:s')
           ];

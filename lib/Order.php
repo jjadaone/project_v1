@@ -7,6 +7,21 @@ class Order {
         $this->db = $db;
     }
 
+    public function getOrders() {
+        $result = $this->db->con->query("
+            SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, created_at
+            FROM orders
+            INNER JOIN users
+            ON users.user_id = orders.user_id
+        ");
+
+        while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $order;
+        }
+
+        return $resultArray;
+    }
+
     public function addOrder($data) {
         
         $user_id = $data['user_id'];
