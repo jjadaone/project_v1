@@ -51,8 +51,21 @@ class Product {
 
     }
     public function updateProduct($data) {
+
+        $product_id = $this->db->con->real_escape_string($data['product_id']);
+        $product_name = $this->db->con->real_escape_string($data['product_name']);
+        $category_id = $this->db->con->real_escape_string($data['category_id']);
+        $price = $this->db->con->real_escape_string($data['price']);
+        $quantity = $this->db->con->real_escape_string($data['quantity']);
+        $description = $this->db->con->real_escape_string($data['description']);
+
+
         $result = $this->db->con->query("
-            UPDATE products SET product_name='$product_name', category_id='$category_id', price = '$price', quantity = '$quantity', description='$description' where id=$id");
+            UPDATE products 
+            SET product_name='$product_name', category_id='$category_id', price = '$price', quantity = '$quantity', description='$description' where product_id=$product_id");
+    
+        if ($result) echo 'succ prod';
+        else echo 'fail prod';
     }
 
     public function deleteProduct($id) {

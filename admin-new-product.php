@@ -63,26 +63,6 @@
                             // 'image' => $image,
                         ];
 
-                        function flash($name, $text='') {
-                            if (isset($_SESSION['name'])) {
-                                $msg = $_SESSION[$name];
-                                unset($_SESSION[$name]);
-                            } else {
-                                $_SESSION[$name] = $text;
-                            }
-                            return '';
-                        }
-                        $prod = $product->addProduct($data);
-                        // header("Location:admin-index.php");
-                        if ($prod) {
-                            flash("msg", "Product added successfully");
-                        } else {
-                            flash("msg", "Error adding the product");
-                        }
-
-                    }
-                ?>
- 
                         $product->addProduct($data);
                         $_SESSION['message'] = "Product added succesfully!";
                         $_SESSION['msg_type'] = "success";

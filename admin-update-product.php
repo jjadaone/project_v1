@@ -14,8 +14,8 @@
                                 <tbody>
                                 <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                                    
-                                        <th scope="row">Product ID</th>
-                                        <td><?php echo $product['product_id']; ?></td>
+                                        <th scope="row" >Product ID</th>
+                                        <td><input type="text" name="product_id" value="<?php echo $product['product_id']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Image</th>
@@ -35,7 +35,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Quantity</th>
-                                        <td><input type="text" name="quantity[]" value="<?php echo $product['quantity']; ?>"></td>
+                                        <td><input type="text" name="quantity" value="<?php echo $product['quantity']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Description</th>
