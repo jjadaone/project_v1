@@ -33,7 +33,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD
     </div>
 
     <div class="container">
@@ -47,9 +46,6 @@
             <button type="button">SHOP NOW</button>
         </div>
     </div>
-=======
-</div> 
->>>>>>> 07c55c1ffc86fceaabc8ffcd89c08e43029438cb
 
 
 
