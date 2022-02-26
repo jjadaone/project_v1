@@ -1,5 +1,7 @@
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+
 .homepage{
-    background-color: #E5E5E5;
+    background-color: #dfdfdf;
 }
 .header .container {
     height: 100vh;
@@ -8,7 +10,7 @@
 .header_container-image {
     display:flex;
     justify-content: center;
-    align-items:center;
+    align-items: flex-end;
 }
 .header_container-image img{
     width: 1250px;
@@ -16,4 +18,27 @@
 
 .container {
     height: 100vh;
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.aboutus_content-left{
+    justify-content: flex-end;
+}
+.aboutus_content-left img{
+    width: 600px;
+}
+
+.aboutus_content-right{
+    margin: 0 180px 0 50px;
+    text-align: center;
+}
+.aboutus_content-right h1{
+    font-weight: 900;
+    font-family: 'Akira Expanded', sans-serif;
+}
+
+.aboutus_content-right p{
+    margin: 25px 50px;
 }

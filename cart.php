@@ -2,11 +2,19 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
+<link rel="stylesheet" type="text/css" href="assets/css/cart-style.css">
 
 <div class="container">
+<<<<<<< HEAD
+    <h1>CART</h1><br>
+    <div class="cart-contain">
+    <form action="update-cart.php" method="POST">
+        <table class="cart-table">
+=======
     <h1 class="title">CART</h1>
     <form action="update-cart.php" method="POST">
         <table style="margin: 119px  auto;" border=1>
+>>>>>>> 07c55c1ffc86fceaabc8ffcd89c08e43029438cb
             <thead>
                 <tr>
                     <th>Image</th>
@@ -17,7 +25,6 @@
                     <th>Action</th>
                 </tr>
             </thead>
-
             <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
             <tbody>
                 <tr>
@@ -29,13 +36,29 @@
                     <td><a class="btn btn-danger" href="delete-cart.php?id=<?php echo $cart['cart_id']; ?>">Remove</a></td>
                 </tr>
             </tbody>
+          
             <?php endforeach; ?>
+<<<<<<< HEAD
+            <div class="update-cart">
+=======
+>>>>>>> 07c55c1ffc86fceaabc8ffcd89c08e43029438cb
             <td>
                 <input class="btn btn-info" type="submit" name="update" value="Update Cart">    
             </td>
+            </div>
         </table>
     </form>
+<<<<<<< HEAD
+    </div>
+            <div class ="checkout">
+                 <a href="order.php">
+					<button class="btn btn-primary btn-lg float-right">Checkout</button>
+				</a>
+            </div>
+                
+=======
 <a href="order.php"><button>Checkout</button></a>   
+>>>>>>> 07c55c1ffc86fceaabc8ffcd89c08e43029438cb
 </div>
 <script>
     //     function openMenu() {

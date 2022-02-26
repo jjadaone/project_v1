@@ -1,12 +1,80 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
-
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
 body{
     font-family: 'Montserrat', sans-serif;
-
+    
 }
+
 .container{
+    width: 1200px;
+    padding-bottom: 100px;
+}
+.cart-contain{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 80vh;
+    flex-direction: column;
+    
+}
+
+.container h1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Akira Expanded';
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 8px;
+    display: flex;
+    margin-top: 80px;
+
+}
+
+
+.cart-table{
+    text-transform: uppercase;
+    width: 1200px;
+    border-top:5px solid rgb(0, 0, 0); 
+    border-bottom: 5px solid rgb(0, 0, 0);
+}
+ 
+.cart-table thead tr{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-weight: bold;
+    
+}   
+
+.cart-table td{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.cart-table input[type="text"]{
+    width: 50px;
+    border: 1px solid #000000;
+    box-sizing: border-box;
+    border-radius: 3px;
+    text-align: center;
+}
+
+.btn {
+    text-transform: uppercase;
+    justify-content: center;
+    flex-direction: column;
+    align-items: right;
+    color: white;
+    background-color: black;
+}
+
+.checkout {
+    height: 80px;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    
 }
