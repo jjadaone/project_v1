@@ -33,11 +33,14 @@
               $orderDetailsData = [
                 'order_id' => $order_id,
                 'product_id' => $cart_item['product_id'],
-                'quantity' => $cart_item['quantity'],
+                'quantity' => $cart_item['cart_quantity'],
                 'total_price' => $cart_item['total'],
               ];
 
               $orderDetails->addOrderDetails($orderDetailsData);
+              $c_quantity = $cart_item['quantity'] >= $cart_item['cart_quantity'] ? $cart_item['cart_quantity'] : $cart_item['quantity'];
+              echo $c_quantity; 
+              $product->decreaseQuantity($cart_item['product_id'], $c_quantity);
             }
 
             $updateOrder = [
