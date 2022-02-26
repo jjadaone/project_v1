@@ -4,7 +4,9 @@
     if (isset($_GET['id'])) {
         echo $_GET['id'];        
         $product->deleteProduct($_GET['id']);
-        header("Location: admin-show-product.php");
+        $_SESSION['message'] = "Product deleted!";
+        $_SESSION['msg_type'] = "danger";
+        header("location: admin-show-product.php");
     } else {
         echo 'failed';
     }

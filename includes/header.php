@@ -1,15 +1,7 @@
-
-<?php
-    // if(!isset($_SESSION)) 
-    // { 
-    //     session_start(); 
-    // } 
-    // include 'config/functions.php';
-    !isset($_SESSION) ? session_start() : null;
-
-?> 
-
 <!DOCTYPE html>
+<?php
+    !isset($_SESSION) ? session_start() : null;
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">

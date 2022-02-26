@@ -1,15 +1,7 @@
-
-<?php
-    // if(!isset($_SESSION)) 
-    // { 
-    //     session_start(); 
-    // } 
-    // include 'config/functions.php';
-    !isset($_SESSION) ? session_start() : null;
-
-?> 
-<!------ Include the above in your HEAD tag ---------->
 <!DOCTYPE html>
+<?php
+    !isset($_SESSION) ? session_start() : null;
+?>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -26,6 +18,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
     <body>
+    <?php
+    if(isset($_SESSION['message'])): ?>
+        <div class="alert alert-<?=$_SESSION['msg_type']?>">
+        <?php
+        echo $_SESSION['message'];
+        unset($_SESSION['message']);
+        unset($_SESSION['msg_type']);
+        ?>
+    </div>
+    <?php endif?>
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div  class="border border-dark" id="sidebar-wrapper">
@@ -63,10 +65,8 @@
                                         echo '<li class="nav-item"><a class="nav-link" href="login.php">Login</a></li>';
                                         echo '<li class="nav-item"><a class="nav-link" href="register.php">Register</a></li>';
                                     }
-                    
-                                ?>  
+                                ?>
                             </ul>
                         </div>
                     </div>
                 </nav>
-

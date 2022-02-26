@@ -7,7 +7,7 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                       <div class ="container">
-                        <form action="admin-new-product.php" method="POST">
+                        <form action="admin-update-process-product.php" method="POST">
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Update Product</th>
@@ -42,14 +42,14 @@
                                         <td><textarea type="text" name="description"><?php echo $product['description']; ?></textarea> </td>
                                         </tr>
                                         <?php endforeach; ?>
-                                        <td><button onclick="UpdateData()">Update</button></td>
+                                        <td><button type="submit" name="updateProduct">Submit</button> </td>
                                 </tbody>
                             </thead>
                             </table>
                         </form>
                     </div>
-              
-  
+
+                  
                 </div>
     </div>
     <!-- Bootstrap core JS-->

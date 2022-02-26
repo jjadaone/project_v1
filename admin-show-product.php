@@ -1,10 +1,4 @@
-<?php 
-    include 'includes/sidebar.php';
-    include 'config/functions.php';
-?>
-<!-- Page content wrapper-->
-
-                <!-- Page content-->
+<?php ob_start(); include 'includes/sidebar.php';include 'config/functions.php';?>
                 <div class="container-fluid">
                           <table class="table table-striped table-hover table-dark">
                             <thead>
@@ -63,6 +57,3 @@
             
             });</script>
 </body>
-
-
-
