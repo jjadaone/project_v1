@@ -54,19 +54,24 @@
         <div class="categories">
             <div class ="row">
                 <div class="col-3">
-                    <img src="assets/images/category-1.jpg">
+                    <img src="assets/images/cc/category-1.jpg">
                 </div>
                 <div class="col-3">
-                    <img src="assets/images/category-2.jpg" >
+                    <img src="assets/images/cc/category-2.jpg" >
                 </div>
                 <div class="col-3">
-                    <img src="assets/images/category-3.jpg" >
+                    <img src="assets/images/cc/category-3.jpg" >
                 </div>
             </div>
+            
         </div>
     </div>
     <div class="container">
-        <div class="title"><h1 >FEAUTURED PRODUCTS</h1></div>
+        <div class="title">
+            <h1 >STREETWEAR</h1><br>
+            <h1>VOLUME 1</h1><br><br>
+            <p>GRAPHIC SHIRTS</p>
+        </div>
             <div class="row">
                 <?php foreach ($product->getProducts() as $product): ?>
                 <div class="col-4">
