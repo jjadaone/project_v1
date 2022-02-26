@@ -1,5 +1,5 @@
 <?php
-    include 'includes/header2.php';
+    include 'includes/header.php';
     include 'config/functions.php';
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/login-register.css">

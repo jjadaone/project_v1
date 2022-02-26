@@ -1,17 +1,9 @@
 <?php 
-    include 'includes/header2.php';
+    include 'includes/header.php';
     include 'config/functions.php';
 ?>
 
-<div class="header">
-        <div class="container">
-            <div class="row">
-            
-                <div class="col-2">
-                </div>
-            </div>
-        </div>
-</div>
+
 <body>
 <div class="container">
     <div class="small-container">
@@ -62,6 +54,24 @@
     </div>
     <?php endforeach; ?>
 </div>
+<script>
+    //     function openMenu() {
+    //   document.querySelector(".sidebar").classList.add("open");
+    // }
+    // function closeMenu() {
+    //   document.querySelector(".sidebar").classList.remove("open")
+    // }
+
+    $(window).scroll(function(){
+         if($(window).scrollTop()){
+             $("nav").addClass("black");
+         }
+         else{
+             $("nav").removeClass("black");
+         }
+     })
+  </script>
+
 
 
 

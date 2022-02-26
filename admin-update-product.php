@@ -15,7 +15,7 @@
                                 <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                                    
                                         <th scope="row" >Product ID</th>
-                                        <td><input type="text" name="product_id" value="<?php echo $product['product_id']; ?>"></td>
+                                        <td><input type="text"  readonly name="product_id" value="<?php echo $product['product_id']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Image</th>

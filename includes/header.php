@@ -10,6 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link href ='assets/css/styles.css' type ='text/css' rel='stylesheet'/>
     <link href ='assets/css/input.css' type ='text/css' rel='stylesheet'/>
+    <link rel="stylesheet" type="text/css" href="assets/css/home.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js" ></script>
@@ -37,7 +38,7 @@
                             
                             if (isset($_GET['action'])) {
                                 session_destroy();
-                            
+                                header("location:index.php");
                             }
                             echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
                         } 
