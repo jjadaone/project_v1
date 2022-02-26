@@ -3,40 +3,40 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
-
+<link rel="stylesheet" type="text/css" href="assets/css/login-register.css">
 <body>
-    <div class="register-card" style="margin: 200px;">
-        <h2>SIGNUP PAGE</h2><br>
+<main class="register_container">
+    <div class="register_card">
+        <h1>WELCOME!</h1>
         <form action="register.php" method="POST">
+            <div class="reg-input">
+            <input type="text" name="first_name" placeholder="FIRST NAME">
 
-            <label for="first_name">First Name</label>
-            <input type="text" name="first_name"><br><br>
+            <input type="text" name="last_name" placeholder="LAST NAME">
 
-            <label for="last_name">Last Name</label>
-            <input type="text" name="last_name"><br><br>
+            <input type="text" name="username" placeholder="USERNAME">
 
-            <label for="username">Username</label>
-            <input type="text" name="username"><br><br>
+            <input type="password" name="password" placeholder="PASSWORD">
 
-            <label for="password">Password</label>
-            <input type="password" name="password"><br><br>
-
-            <label for="email">Email</label>
-            <input type="email" name="email"><br><br>
-
-            <p>Selct your gender</p>
-            <label for="male">Male</label>
-            <input type="radio" name="gender" value="M">
-            <label for="female">Female</label>
-            <input type="radio" name="gender" value="F"><br><br>
-
-            <label for="birthdate">Birthdate</label>
-            <input type="date" name="birthdate"><br><br>
+            <input type="email" name="email" placeholder="EMAIL ADDRESS">
+            <input type="date" name="birthdate" placeholder="DATE OF BIRTH">
+            </div>
+            
+            <div class="gender-radio">
+            <!--<p>Select your gender</p>-->
+            <label for="male">MALE</label>
+            <input type="radio" name="gender" value="M" id="male">
+            <label for="female">FEMALE</label>
+            <input type="radio" name="gender" value="F" id="female">
+            </div>
+            
 
 
-            <button type="submit" name="register">Sign up</button>      
+            <button type="submit" name="register">REGISTER</button>      
         </form>
+        <p>ALREADY A MEMBER? <a href="/">SIGN IN</a></p>
     </div>
+</div>
 </body>
 
 <?php

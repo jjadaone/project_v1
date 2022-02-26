@@ -28,15 +28,15 @@
     <div>
         <nav>
         <div class="logo-image">
-            <img src="assets/images/cloth-chasing-logo-3.png" class="img-fluid">
+            <img src="assets/images/cc/cc-logo-white.png" class="img-fluid" height="60px">
         </div>
             <input type="checkbox" id="click">
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
                 <ul>
                     <li><a class="active" href="index.php">Home</a></li>
                     <li><a href="#">About</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Feedback</a></li>
+                    <!--<li><a href="#">Gallery</a></li>
+                    <li><a href="#">Feedback</a></li>-->
                     <?php 
                     if ($_SESSION) {
                         if ($_SESSION['id']) {

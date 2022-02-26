@@ -3,7 +3,8 @@
     include 'config/functions.php';
 ?>
 
-<div>
+<div class="container">
+    <h1>CART</h1>
     <form action="update-cart.php" method="POST">
         <table style="margin: 200px auto;" border=1>
             <thead>

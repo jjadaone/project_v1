@@ -1,0 +1,19 @@
+.homepage{
+    background-color: #E5E5E5;
+}
+.header .container {
+    height: 100vh;
+}
+
+.header_container-image {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+.header_container-image img{
+    width: 1250px;
+}
+
+.container {
+    height: 100vh;
+}

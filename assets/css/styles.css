@@ -1,5 +1,6 @@
 
-     @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+     /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+     */
      *{
        margin: 0;
        padding: 0;
@@ -31,10 +32,9 @@
      }
      .logo-image{
       width: 90px;
-      height: 40px;
-      border-radius: 50%;
+      height: 60px;
       overflow: hidden;
-      margin-top: -20px;
+      
   }
 
      nav ul{
@@ -148,8 +148,8 @@
      }
      .header
      {
-     background: rgb(91,100,103);
-     background: linear-gradient(90deg, rgba(91,100,103,1) 10%, rgba(118,127,130,1) 35%, rgba(162,174,179,1) 82%, rgba(217,235,240,1) 100%);
+     background: #DFDFDF;
+     
      }
      .row
      {
@@ -185,11 +185,11 @@
        flex-basis: 50%;
      
      }
-     .col-2 img
+     /*.col-2 img
      {
        max-width: 100%;
        padding: 50px 0;
-     }
+     }*/
      .col-3
      {
          flex-basis: 33%;

@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+body{
+    background-image: url('/project_v1/assets/images/cc/wallpaper.jpg');
+    font-family: 'Montserrat', sans-serif;
+
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-card{
+    flex-direction: column;
+    width: 400px;
+    height: 410px;
+    background: #FFFFFF;
+    mix-blend-mode: normal;
+    border-radius: 20px;
+}
+
+
+.login-card h1{
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 78px;
+    display: flex;
+    margin: 50px 0 0 25px;
+}
+
+.login-card p {
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    font-size: 12px;
+    font-weight: 700;
+    display:flex;
+    justify-content: center;
+}
+
+.login-card a{
+    text-decoration: none;
+    color: #000;
+}
+
+
+.login-card button {
+    width: 350px;
+    height: 55px;
+    background: #000000;
+    line-height: 20px;
+    font-size: 18px;
+    color: #FFF;
+    margin: 20px 20px;
+}
+
+.login-card input{
+    width: 350px;
+    height: 40px;
+    font-size: 16px;
+    color: #595959;
+    border: 1px solid #595959;
+    box-sizing: border-box;
+    border-radius: 5px;
+    margin: 0 20px 5px;
+
+    padding-left: 10px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.login-card input::placeholder {
+    font-size: 14px;
+    font-weight: 700;
+    color: #595959;
+    
+    text-align: left;
+}
+
+@media screen and (max-width: 550px) {
+    .login-card{
+        width: 350px;
+    }
+
+    .login-card input{
+        width: 300px;
+    }
+
+    .login-card button {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 338px)
+{
+    .login-card h1{
+        font-size: 40px;
+    }
+    .login-card{
+        width: 290px;
+    }
+
+    .login-card input{
+        width: 250px;
+    }
+
+    .login-card button {
+        width: 250px;
+    }
+}
+
+/*REGISTER CSS */
+.register_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+}
+
+.register_card{
+    width: 400px;
+    background-color: #FFF;
+    border-radius: 20px;
+
+    flex-direction: column;
+
+}
+
+.register_card button {
+    width: 350px;
+    height: 55px;
+    background: #C80000;
+    line-height: 20px;
+    font-size: 18px;
+    color: #FFF;
+    margin: 25px 0;
+}
+
+.register_card form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.reg-input input{
+    width: 350px;
+    height: 40px;
+    font-size: 14px;
+    color: #595959;
+    border: 1px solid #595959;
+    box-sizing: border-box;
+    border-radius: 5px;
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    margin: 8px 0;
+    padding-left: 10px;
+
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
+
+.register_card input::placeholder{
+    font-weight: 700;
+}
+
+.register_card h1 {
+    font-size: 42px;
+    line-height: 78px;
+    font-weight: 700;
+    color: #000000;
+    letter-spacing: 1px;
+
+    margin: 50px 0 0 25px;
+}
+
+.register_card p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+.register_card a {
+    text-decoration: none;
+    color: #000;
+}
+
+.gender-radio{
+    display: flex;
+    flex-direction: row;
+}
+
+.gender-radio input{
+    margin: 0;
+    padding: 0;
+}
+
+.gender-radio input[type="radio"]{
+    height: 25px;
+}
