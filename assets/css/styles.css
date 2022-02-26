@@ -1,11 +1,15 @@
 
      /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
      */
+     @font-face {
+      font-family: Akira;
+      src: url(assets/fonts/akira.otf);
+      }
      *{
        margin: 0;
        padding: 0;
        box-sizing: border-box;
-       font-family: 'Poppins', sans-serif;
+       font-family: Akira;
      } 
      html,body {
       margin:0;
@@ -13,6 +17,7 @@
       overflow-x:hidden;
       }
      nav{
+      font-family: Akira;
        top: 0;
        position: fixed;
        display: flex;
@@ -174,7 +179,11 @@
        font-weight: 700;
      }
      
-     
+     .wrapper
+     {
+      max-width: 100%;
+      margin: 0 auto;
+     }
      .categories
      {
          margin: 5% 0;
@@ -185,16 +194,20 @@
        flex-basis: 50%;
      
      }
-     /*.col-2 img
+     /* .col-2 img
      {
        max-width: 100%;
        padding: 50px 0;
-     }*/
+     } */
      .col-3
      {
          flex-basis: 33%;
          min-width: 20%;
          margin-bottom: 30px;
+     }
+     .col-3 img
+     {
+      max-width: 100%;
      }
      .col-4
      {

@@ -24,7 +24,6 @@
     </aside>
 </div> -->
 
-<link rel="stylesheet" type="text/css" href="assets/css/home.css">
 <div class="homepage">
     <div class="header">
         <div class="container">
@@ -34,10 +33,11 @@
                 </div>
             </div>
         </div>
-    </div> 
+</div> 
 
 
-    <div class="container">
+
+    <div class="wrapper">
         <h1 class="title">CATEGORIES</h1>
         <div class="categories">
             <div class ="row">
@@ -53,11 +53,6 @@
             </div>
         </div>
     </div>
-
-
-
-        
-        
     <div class="container">
         <div class="title"><h1 >FEAUTURED PRODUCTS</h1></div>
             <div class="row">

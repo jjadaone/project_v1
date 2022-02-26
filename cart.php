@@ -4,9 +4,9 @@
 ?>
 
 <div class="container">
-    <h1>CART</h1>
+    <h1 class="title">CART</h1>
     <form action="update-cart.php" method="POST">
-        <table style="margin: 200px auto;" border=1>
+        <table style="margin: 119px  auto;" border=1>
             <thead>
                 <tr>
                     <th>Image</th>
@@ -30,17 +30,30 @@
                 </tr>
             </tbody>
             <?php endforeach; ?>
-            
             <td>
-                <input class="btn btn-info" type="submit" name="update" value="Update Cart">
-                     
+                <input class="btn btn-info" type="submit" name="update" value="Update Cart">    
             </td>
         </table>
     </form>
-                 <a href="order.php">
-					<button class="btn btn-primary btn-lg float-right">Checkout</button>
-				</a>
-                
+<a href="order.php"><button>Checkout</button></a>   
 </div>
+<script>
+    //     function openMenu() {
+    //   document.querySelector(".sidebar").classList.add("open");
+    // }
+    // function closeMenu() {
+    //   document.querySelector(".sidebar").classList.remove("open")
+    // }
+
+    $(window).scroll(function(){
+         if($(window).scrollTop()){
+             $("nav").addClass("black");
+         }
+         else{
+             $("nav").removeClass("black");
+         }
+     })
+  </script>
+
 
 <?php include 'includes/footer.php'; ?>
