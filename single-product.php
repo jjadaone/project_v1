@@ -49,7 +49,13 @@
 <div>
     <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
     <div class="review">
-        <h5>Rating: <?php echo $review['rating']; ?></h5>
+        <h5>
+        <div class="rating">
+            <?php for($i=0; $i < $review['rating']; $i++) { ?>
+                <i class="fa fa-star" <?php echo $i; ?>></i>
+            <?php } ?>
+        </div>
+        </h5>
         <strong><?php echo $review['username']; ?></strong>
         <p><?php echo $review['review']; ?></p>
         <p><?php echo $review['date_created']; ?></p>

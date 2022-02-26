@@ -1,8 +1,4 @@
-<?php 
-    // require '/lib/Database.php';
-    // require '/lib/User.php';
-    // require '/lib/Product.php';
-
+<?php
     $DIRECTORY = $_SERVER['DOCUMENT_ROOT'] . '/project_v1';
     define('HOME_DIR', $DIRECTORY);
 
@@ -23,5 +19,4 @@
     $category = new Category($db);
     $review = new Review($db);
     $order = new Order($db);
-    $orderDetails = new OrderDetails($db);
-?>
+    $orderDetails = new OrderDetails($db);?>

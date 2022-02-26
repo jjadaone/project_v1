@@ -33,10 +33,18 @@
           <td><?php echo $order['city']; ?></td>
           <td><?php echo $order['zipcode']; ?></td>
           <td><?php echo $order['order_status']; ?></td>
-          <td><?php echo $order['created_at']; ?></td>    
+          <td><?php echo $order['order_date']; ?></td>    
           <td>
-            <a href ="">Details</a>
-            <a href="">Status</a>
+            <a class="btn btn-secondary" href ="">Details</a>
+            <div class="btn-group">
+              <button class="btn btn-success dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                Status
+              </button>
+              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                <li><a class="dropdown-item" href="admin-update-order.php?order_id=<?php echo $order['order_id']; ?>&status=delivered">Delivered</a></li>
+                <li><a class="dropdown-item" href="admin-update-order.php?order_id=<?php echo $order['order_id']; ?>&status=canceled">Canceled</a></li>
+              </ul>
+            </div>
           </td>
         </tr>
         <?php endforeach; ?>
@@ -47,4 +55,3 @@
   </div>
 
 <?php include 'includes/footer.php'; ?>
-

@@ -6,6 +6,7 @@ class Product {
         if (!isset($db->con)) return null;
         $this->db = $db;
     }
+    
 
     public function getProducts($category_id=null) {
        
@@ -48,15 +49,27 @@ class Product {
             VALUES ('$product_name', '$category_id', '$price', '$quantity', '$description')
         ");
 
-        if ($result) return true;
+    }
+    public function updateProduct($data) {
+
+        $product_id = $this->db->con->real_escape_string($data['product_id']);
+        $product_name = $this->db->con->real_escape_string($data['product_name']);
+        $category_id = $this->db->con->real_escape_string($data['category_id']);
+        $price = $this->db->con->real_escape_string($data['price']);
+        $quantity = $this->db->con->real_escape_string($data['quantity']);
+        $description = $this->db->con->real_escape_string($data['description']);
+
+
+        $result = $this->db->con->query("
+            UPDATE products 
+            SET product_name='$product_name', category_id='$category_id', price = '$price', quantity = '$quantity', description='$description' where product_id=$product_id");
+    
+        if ($result) echo 'succ prod';
+        else echo 'fail prod';
     }
 
     public function deleteProduct($id) {
         $result = $this->db->con->query("DELETE FROM products WHERE product_id={$id}");
-
-        if ($result) {
-            echo 'Deletion successful.';
-        }
         
     }
 
@@ -65,61 +78,3 @@ class Product {
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- public function addProduct($query) {
-        $result = $this->db->con->query($query);
-        
-        if ($result) {
-            echo 'Product created successfully.';
-
-        } else {
-            echo 'Error creating the product.';
-        }
-    } -->

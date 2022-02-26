@@ -7,15 +7,15 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                       <div class ="container">
-                        <form action="admin-new-product.php" method="POST">
+                        <form action="admin-update-process-product.php" method="POST">
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Update Product</th>
                                 <tbody>
                                 <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                                    
-                                        <th scope="row">Product ID</th>
-                                        <td><?php echo $product['product_id']; ?></td>
+                                        <th scope="row" >Product ID</th>
+                                        <td><input type="text" name="product_id" value="<?php echo $product['product_id']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Image</th>
@@ -35,21 +35,21 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Quantity</th>
-                                        <td><input type="text" name="quantity[]" value="<?php echo $product['quantity']; ?>"></td>
+                                        <td><input type="text" name="quantity" value="<?php echo $product['quantity']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Description</th>
                                         <td><textarea type="text" name="description"><?php echo $product['description']; ?></textarea> </td>
                                         </tr>
                                         <?php endforeach; ?>
-                                        <td><button onclick="UpdateData()">Update</button></td>
+                                        <td><button type="submit" name="updateProduct">Submit</button> </td>
                                 </tbody>
                             </thead>
                             </table>
                         </form>
                     </div>
-              
-  
+
+                  
                 </div>
     </div>
     <!-- Bootstrap core JS-->

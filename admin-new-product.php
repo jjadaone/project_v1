@@ -1,11 +1,6 @@
+<?php ob_start(); include 'includes/sidebar.php';include 'config/functions.php';?>
 
-<?php 
-    include 'includes/sidebar.php';
-    include 'config/functions.php';
-?>
-<!-- Page content wrapper-->
-                <!-- Page content-->
-                <div class="container-fluid">
+        <div class="container-fluid">
                 <body>
                     <div class ="container">
                         <form action="admin-new-product.php" method="POST">
@@ -34,11 +29,12 @@
                                         </tr>
                                         <tr>
                                         <th scope="row"><label for="image">Upload Image</label></th>
-                                        <td><input type="file" name="txtFile" id="txtFile"></td>
+                                        <td><input type="file" name="image" id="image"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row"></th>
-                                        <td><button type="submit" name="addProduct" onclick="alert('Item Added Succesfully'); return false;">Submit</button> </td>
+                            
+                                        <td><button type="submit" name="addProduct">Submit</button> </td>
                                         </tr>
                                         
                                 </tbody>
@@ -48,9 +44,8 @@
                     </div>
                 </body>
                 <?php
-
                     if (isset($_POST['addProduct'])) {
-
+                        
                         $product_name = $_POST['product_name'];
                         $category_id = $_POST['category_id'];
                         $price = $_POST['price'];
@@ -69,11 +64,10 @@
                         ];
 
                         $product->addProduct($data);
-                        // header("Location:admin-index.php");
-                        
-                    }
-                ?>
- 
+                        $_SESSION['message'] = "Product added succesfully!";
+                        $_SESSION['msg_type'] = "success";
+                        header("location: admin-new-product.php");
+                    }?>
                 </div>
             </div>
         </div>
@@ -97,11 +91,6 @@
             }
             
             });</script>
-                <script>
-                <?php
-
-                ?>
-                </script>
 </body>
   
 

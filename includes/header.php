@@ -1,15 +1,7 @@
-
-<?php
-    // if(!isset($_SESSION)) 
-    // { 
-    //     session_start(); 
-    // } 
-    // include 'config/functions.php';
-    !isset($_SESSION) ? session_start() : null;
-
-?> 
-
 <!DOCTYPE html>
+<?php
+    !isset($_SESSION) ? session_start() : null;
+?>
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
@@ -25,6 +17,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
+       
     <div>
         <nav>
         <div class="logo-image">
@@ -57,7 +50,7 @@
                     
                     
                     ?>    
-                  <li  class="item-numb"><a><?php echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li>
+                  <li  class="item-numb"><a><?php //echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li>
 
                </ul>
         </nav>
