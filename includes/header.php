@@ -21,8 +21,8 @@
        
     <div>
         <nav>
-        <div class="logo-image">
-            <img src="assets/images/cc/cc-logo-white.png" class="img-fluid" height="60px">
+        <div class="logo">
+            <img src="/project_v1/assets/images/cc/cc-logo-white.png" height="60px">
         </div>
             <input type="checkbox" id="click">
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>

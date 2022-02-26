@@ -33,6 +33,7 @@ body{
 
 
 .cart-table{
+    font-family: 'Montserrat';
     text-transform: uppercase;
     width: 1200px;
     border-top:5px solid rgb(0, 0, 0); 
