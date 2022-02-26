@@ -1,16 +1,16 @@
 <?php 
-    include 'includes/header.php';
+    include 'includes/header2.php';
     include 'config/functions.php';
 ?>
 
-
+<link rel="stylesheet" type="text/css" href="assets/css/product.css">
 <body>
 <div class="container">
     <div class="small-container">
         <div class="row">
             <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                 <div class="col-2">
-                <img src="assets/images/product-1.jpg"></img>
+                <img src="assets/images/cc/shirt-temp/shirt-temp1.jpg" height="600px"></img>
                     <?php echo $product['image']; ?>
                 </div>
                 <div class="col-2">

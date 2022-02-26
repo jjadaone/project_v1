@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="container-1">
+    <div class="container-1" id="about">
         <div class="aboutus_content-left">
             <img src="assets/images/cc/about.png" alt="about us photo">
         </div>
@@ -43,8 +43,8 @@
             <h1>WHO ARE WE?</h1>
             <p>Cloth Chasing Clothing is a clothing line retailer that has a product line of streeetwear graphic shirts, techwear clothes and accessories. We aim to bring international designs to the Philippines and collaborate it with local designs. 
                 Let’s chase trends together.</p>
-            <button type="button">SHOP NOW</button>
-        </div>
+            <button type="button"><a href="#shop-now">SHOP NOW</a></button>
+        </div>"
     </div>
 
 
@@ -66,7 +66,7 @@
             
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="shop-now">
         <div class="title">
             <h1 >STREETWEAR</h1><br>
             <h1>VOLUME 1</h1><br><br>
