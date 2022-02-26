@@ -1,5 +1,5 @@
 <?php 
-    include 'includes/header.php';
+    include 'includes/header2.php';
     include 'config/functions.php';
 ?>
 
@@ -10,8 +10,8 @@
         <div class="row">
             <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                 <div class="col-2">
-                <img src="assets/images/product-1.jpg"></img>
-                    <?php echo $product['image']; ?>
+                <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
+            
                 </div>
                 <div class="col-2">
                     <h1><?php echo $product['product_name']; ?></h1>
@@ -54,24 +54,6 @@
     </div>
     <?php endforeach; ?>
 </div>
-<script>
-    //     function openMenu() {
-    //   document.querySelector(".sidebar").classList.add("open");
-    // }
-    // function closeMenu() {
-    //   document.querySelector(".sidebar").classList.remove("open")
-    // }
-
-    $(window).scroll(function(){
-         if($(window).scrollTop()){
-             $("nav").addClass("black");
-         }
-         else{
-             $("nav").removeClass("black");
-         }
-     })
-  </script>
-
 
 
 
