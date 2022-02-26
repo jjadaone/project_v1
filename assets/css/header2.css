@@ -1,14 +1,7 @@
 
      /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
      */
-<<<<<<< HEAD
      @import url('http://fonts.cdnfonts.com/css/akira-expanded');
-=======
-     @font-face {
-      font-family: Akira;
-      src: url(assets/fonts/akira.otf);
-      }
->>>>>>> 07c55c1ffc86fceaabc8ffcd89c08e43029438cb
      *{
        margin: 0;
        padding: 0;
