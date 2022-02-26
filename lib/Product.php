@@ -40,15 +40,19 @@ class Product {
         $product_name = $this->db->con->real_escape_string($data['product_name']);
         $category_id = $this->db->con->real_escape_string($data['category_id']);
         $price = $this->db->con->real_escape_string($data['price']);
-        $image = $this->db->con->real_escape_string($data['image']);
+        $image = $data['image'];
+        echo $image;
         $quantity = $this->db->con->real_escape_string($data['quantity']);
         $description = $this->db->con->real_escape_string($data['description']);
         
 
         $result = $this->db->con->query("
-            INSERT INTO products(product_name, category_id, price, quantity, description,'image') 
+            INSERT INTO products(product_name, category_id, price, quantity, description, image) 
             VALUES ('$product_name', '$category_id', '$price', '$quantity', '$description','$image')
         ");
+
+        if ($result) echo 'sucess';
+        else echo 'fail add';
 
     }
     public function updateProduct($data) {

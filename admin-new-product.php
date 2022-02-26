@@ -29,7 +29,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row"><label for="image">Upload Image</label></th>
-                                        <td><input type="file" name="image" id="image" accept="image/*"></td>
+                                        <td><input type="file" name="image" id="image"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row"></th>
@@ -52,21 +52,21 @@
                         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
                         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                            echo "The file".basename( $_FILES["image"]["name"]). " has been uploaded.";
+                            echo "The file".basename( $_FILES["image"]["name"]). " has been uploaded.   ";
                         } else {
                             echo "Sorry, there was an error uploading your file.";
                         }
-                        $image=basename($_FILES["image"]["name"],".jpg"); // used to store the filename in a variable
+                        $image_name = basename($_FILES["image"]["name"],".jpg" . ".jpg"); // used to store the filename in a variable
                        
-                        
+                        // echo $image;
                         $product_name = $_POST['product_name'];
                         $category_id = $_POST['category_id'];
                         $price = $_POST['price'];
                         $quantity = $_POST['quantity'];
                         $description = $_POST['description'];
-                        $image = $_FILES['image'];
+                        $image = $_FILES['image']['name'];//'$image_name';
 
-
+                        // echo $image;
                         $data = [
                             'product_name' => $product_name,
                             'category_id' => $category_id,
