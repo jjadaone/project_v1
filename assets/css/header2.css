@@ -192,11 +192,12 @@
        flex-basis: 50%;
      
      }
-     /* .col-2 img
+     .col-2 img
      {
+
        max-width: 100%;
        padding: 50px 0;
-     } */
+     }
      .col-3
      {
       flex-basis: 33%;

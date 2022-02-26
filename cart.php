@@ -19,9 +19,10 @@
                     <th>Action</th>
                 </tr>
             </thead>
-            <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
+           
             <tbody>
                 <tr>
+                <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
                     <td><img style="width: 200px; height: 100px;" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="no image"></td>
                     <td><?php echo $cart['product_name']; ?></td>
                     <td><?php echo $cart['price']; ?></td>
@@ -29,22 +30,30 @@
                     <td><?php echo $cart['total']; ?></td>
                     <td><a class="btn btn-danger" href="delete-cart.php?id=<?php echo $cart['cart_id']; ?>">Remove</a></td>
                 </tr>
-            </tbody>
-          
-            <?php endforeach; ?>
-            <div class="update-cart">
-            <td>
-                <input class="btn btn-info" type="submit" name="update" value="Update Cart">    
-            </td>
-            </div>
+                <?php endforeach; ?>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                </td>
+                <td>
+                    <div class="update-cart" >
+                    <input class="btn btn-info btn-lg float-right" type="submit" name="update" value="Update">
+                    </div>
+                </td>
+                <td>
+                    <div class ="checkout">
+                    <a href="order.php"><button class="btn btn-primary btn-lg float-right">Checkout</button></a>
+                    </div>
+                </td>
+
+            </tbody>  
         </table>
     </form>
     </div>
-            <div class ="checkout">
-                 <a href="order.php">
-					<button class="btn btn-primary btn-lg float-right">Checkout</button>
-				</a>
-            </div>
                 
 </div>
 <script>

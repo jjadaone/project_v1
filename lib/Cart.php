@@ -84,6 +84,7 @@ class Cart {
         ");
 
         if ($result) echo 'Quantities updated successfully.';
+        else echo 'fail';
     }
 
     public function deleteCart($cart_id) {
