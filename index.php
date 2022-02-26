@@ -75,7 +75,7 @@
             <div class="row">
                 <?php foreach ($product->getProducts() as $product): ?>
                 <div class="col-4">
-                    <img src="assets/images/product-1.jpg" alt="">
+                    <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
                     <h4><?php echo $product['product_name']; ?></h4>
                     <div class ="rating">
                         <i class="fa fa-star"></i>
