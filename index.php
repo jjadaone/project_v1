@@ -23,7 +23,7 @@
         </ul>
     </aside>
 </div> -->
-<link rel="stylesheet" type="text/css" href="assets/css/home.css">
+
 <div class="homepage">
     <div class="header">
         <div class="container">
@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="container-1">
+    <div class="container">
         <div class="aboutus_content-left">
             <img src="assets/images/cc/about.png" alt="about us photo">
         </div>
