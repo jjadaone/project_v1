@@ -38,7 +38,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row"></th>
-                                        <td><button type="submit" name="addProduct" onclick="alert('Item Added Succesfully'); return false;">Submit</button> </td>
+                                        <td><button type="submit" name="addProduct" onclick="success_toast()">Submit</button> </td>
                                         </tr>
                                         
                                 </tbody>
@@ -68,9 +68,23 @@
                             // 'image' => $image,
                         ];
 
-                        $product->addProduct($data);
+                        function flash($name, $text='') {
+                            if (isset($_SESSION['name'])) {
+                                $msg = $_SESSION[$name];
+                                unset($_SESSION[$name]);
+                            } else {
+                                $_SESSION[$name] = $text;
+                            }
+                            return '';
+                        }
+                        $prod = $product->addProduct($data);
                         // header("Location:admin-index.php");
-                        
+                        if ($prod) {
+                            flash("msg", "Product added successfully");
+                        } else {
+                            flash("msg", "Error adding the product");
+                        }
+
                     }
                 ?>
  
@@ -98,9 +112,7 @@
             
             });</script>
                 <script>
-                <?php
 
-                ?>
                 </script>
 </body>
   

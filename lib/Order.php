@@ -9,7 +9,7 @@ class Order {
 
     public function getOrders() {
         $result = $this->db->con->query("
-            SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, created_at
+            SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
             FROM orders
             INNER JOIN users
             ON users.user_id = orders.user_id
@@ -29,15 +29,15 @@ class Order {
         $city = $data['city'];
         $zipcode = $data['zipcode'];
         $order_status = $data['order_status'];
-        $created_at = $data['created_at'];
-        $updated_at = $data['updated_at'];
+        $order_date = $data['order_date'];
+        // $updated_at = $data['updated_at'];
 
         // print_r($data);
 
         $result = $this->db->con->query("
             insert into 
-            orders (user_id, address, city,  zipcode, order_status, created_at, updated_at) 
-            values ('$user_id', '$address', '$city', '$zipcode', '$order_status', '$created_at', '$updated_at')
+            orders (user_id, address, city,  zipcode, order_status, order_date) 
+            values ('$user_id', '$address', '$city', '$zipcode', '$order_status', '$order_date')
         ");
 
         if ($result) return true;
@@ -58,6 +58,22 @@ class Order {
 
     }
 
+    public function updateOrderStatus($data) {
+        $order_id = $data['order_id'];
+        $status = $data['status'];
+        $delivery_date = $data['delivery_date'];
+        $cancellation_date = $data['cancellation_date'];
+        echo $order_id,$status,$delivery_date,$cancellation_date;
+
+        $result = $this->db->con->query("
+            UPDATE orders 
+            SET order_status='$status', delivery_date='$delivery_date', cancellation_date='$cancellation_date'
+            WHERE order_id=$order_id
+        ");
+
+        if ($result) echo 'success status change';
+        else echo 'fail sttus change';
+    }
     
 
 

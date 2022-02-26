@@ -49,6 +49,7 @@ class Product {
         ");
 
         if ($result) return true;
+        else return false;
     }
 
     public function deleteProduct($id) {
