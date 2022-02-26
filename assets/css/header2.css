@@ -1,10 +1,7 @@
 
      /*@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
      */
-     @font-face {
-      font-family: Akira;
-      src: url(assets/fonts/akira.otf) format('opentype');
-      }
+     @import url('http://fonts.cdnfonts.com/css/akira-expanded');
      *{
        margin: 0;
        padding: 0;
@@ -38,7 +35,7 @@
      }
 
      nav ul{
-       
+      font-family: 'Akira Expanded', sans-serif;
       list-style: none;
       background: rgba(0,0,0,0);
        display: flex;
@@ -53,13 +50,15 @@
       background: #000;
   }
      nav ul li{
+      font-family: 'Akira Expanded', sans-serif;
        margin: 0 5px;
        display: inline-block;
      }
      nav ul li a{
+        font-family: 'Akira Expanded', sans-serif;
        color: #f2f2f2;
        text-decoration: none;
-       font-size: 18px;
+       font-size: 14px;
        font-weight: 500;
        padding: 8px 15px;
        border-radius: 5px;

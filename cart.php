@@ -2,11 +2,13 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
+<link rel="stylesheet" type="text/css" href="assets/css/cart-style.css">
 
 <div class="container">
-    <h1>CART</h1>
+    <h1>CART</h1><br>
+    <div class="cart-contain">
     <form action="update-cart.php" method="POST">
-        <table style="margin: 200px auto;" border=1>
+        <table class="cart-table">
             <thead>
                 <tr>
                     <th>Image</th>
@@ -17,7 +19,6 @@
                     <th>Action</th>
                 </tr>
             </thead>
-
             <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
             <tbody>
                 <tr>
@@ -29,17 +30,22 @@
                     <td><a class="btn btn-danger" href="delete-cart.php?id=<?php echo $cart['cart_id']; ?>">Remove</a></td>
                 </tr>
             </tbody>
+          
             <?php endforeach; ?>
-            
+            <div class="update-cart">
             <td>
                 <input class="btn btn-info" type="submit" name="update" value="Update Cart">
                      
             </td>
+            </div>
         </table>
     </form>
+    </div>
+            <div class ="checkout">
                  <a href="order.php">
 					<button class="btn btn-primary btn-lg float-right">Checkout</button>
 				</a>
+            </div>
                 
 </div>
 
