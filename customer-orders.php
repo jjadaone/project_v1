@@ -35,7 +35,7 @@
           <td><?php echo $order['order_status']; ?></td>
           <td><?php echo $order['order_date']; ?></td>    
           <td>
-            <a class="btn btn-secondary" href="admin-orders-detail.php?order_id=<?php echo $order['order_id']; ?>&status=delivered">Details</a>
+            <a class="btn btn-secondary" href="customer-order-details.php?order_id=<?php echo $order['order_id']; ?>&status=<?php echo $order['order_status']; ?>">Details</a>
             <?php if ($order['order_status'] != 'canceled' && $order['order_status'] != 'delivered'): ?>
                 <a class="btn btn-danger" href="customer-order-cancellation.php?order_id=<?php echo $order['order_id']; ?>&status=canceled">Cancel Order</a>
             <?php endif; ?>

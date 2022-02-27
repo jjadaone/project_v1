@@ -41,6 +41,7 @@
                     <?php 
                     if ($_SESSION) {
                         if ($_SESSION['id']) {
+                            echo '<li><a href="customer-orders.php">Orders</a></li>';
                             echo '<li><a href="?action=logout">Logout</a></li>';
                             
                             if (isset($_GET['action'])) {
