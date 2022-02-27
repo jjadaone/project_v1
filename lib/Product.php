@@ -90,6 +90,17 @@ class Product {
         else echo 'fail decrease';
     }
 
+    public function increaseQuantity($product_id, $order_quantity) {
+        $result = $this->db->con->query("
+            UPDATE products
+            SET quantity = quantity + $order_quantity 
+            WHERE product_id = $product_id
+        ");
+
+        if ($result) echo 'success quantity increase';
+        else echo 'fail increase';
+    }
+
 
 }
 

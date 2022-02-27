@@ -29,7 +29,7 @@ class OrderDetails {
 
     public function getOrderDetails($order_id) {
         $result = $this->db->con->query("
-            SELECT product_name, price, order_details.quantity, total_price
+            SELECT product_name, price, order_details.quantity, total_price, order_details.product_id
             FROM order_details
             INNER JOIN products
             ON products.product_id = order_details.product_id

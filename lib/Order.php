@@ -7,13 +7,25 @@ class Order {
         $this->db = $db;
     }
 
-    public function getOrders() {
-        $result = $this->db->con->query("
-            SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
-            FROM orders
-            INNER JOIN users
-            ON users.user_id = orders.user_id
-        ");
+    public function getOrders($user_id = null) {
+
+        if ($user_id == null) {
+            $result = $this->db->con->query("
+                SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
+                FROM orders
+                INNER JOIN users
+                ON users.user_id = orders.user_id
+            ");
+        } else {
+            $result = $this->db->con->query("
+                SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
+                FROM orders
+                INNER JOIN users
+                ON users.user_id = orders.user_id
+                WHERE users.user_id = $user_id
+            ");
+        }
+
 
         $resultArray = array();
 
