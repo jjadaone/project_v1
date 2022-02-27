@@ -10,13 +10,8 @@
         <div class="row">
             <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                 <div class="col-2">
-<<<<<<< HEAD
                 <img src="assets/images/cc/shirt-temp/shirt-temp1.jpg" height="600px"></img>
                     <?php echo $product['image']; ?>
-=======
-                <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
-            
->>>>>>> b3c6a74686ed61eaa66bf002d9119259a72ef482
                 </div>
                 <div class="col-2">
                     <h1><?php echo $product['product_name']; ?></h1>
