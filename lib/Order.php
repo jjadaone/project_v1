@@ -15,6 +15,8 @@ class Order {
             ON users.user_id = orders.user_id
         ");
 
+        $resultArray = array();
+
         while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             $resultArray[] = $order;
         }
@@ -24,8 +26,13 @@ class Order {
 
     public function getSingleOrder($order_id) {
         $result = $this->db->con->query("
-            SELECT * FROM orders WHERE order_id=$order_id
+            SELECT * FROM orders 
+            INNER JOIN users
+            ON users.user_id = orders.user_id
+            WHERE orders.order_id=$order_id
         ");
+
+        $resultArray = array();
 
         while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             $resultArray[] = $order;
