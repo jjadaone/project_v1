@@ -4,7 +4,59 @@
 ?>
 <div style="margin: 55px"></div>
   <div class="container">
+
+  <table class="table table-striped table-dark">
+    <h3>Billing Details</h3>
+      <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Phone</th>
+            <th>Email</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>Zipcode</th>
+            <th>Country</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <?php foreach ($order->getSingleOrder($_GET['order_id']) as $order_billing): ?>
+          <td><?php echo $order_billing['first_name']; ?></td>
+          <td><?php echo $order_billing['last_name']; ?></td>
+          <td>09985216192</td>
+          <td><?php echo $order_billing['email']; ?></td>
+          <td><?php echo $order_billing['address']; ?></td>
+          <td><?php echo $order_billing['city']; ?></td>
+          <td><?php echo $order_billing['zipcode']; ?></td>
+          <td>Philippines</td>
+        </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+
     <table class="table table-striped table-dark">
+      <h3>Order Summary</h3>
+      <thead>
+        <tr>
+            <th>Subtotal</th>
+            <th>Shipping Fee</th>
+            <th>Total</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <?php foreach ($order->getSingleOrder($_GET['order_id']) as $order_billing): ?>
+          <td><?php echo $order_billing['total_price']-80; ?></td>
+          <td>80</td>
+          <td><?php echo $order_billing['total_price']; ?></td>
+        </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>
+
+    <table class="table table-striped table-dark">
+      <h3>Order Details</h3>
       <thead>
         <tr>
             <th>Order ID</th>
@@ -38,6 +90,7 @@
     </table>
 
     <table class="table table-striped table-dark">
+      <h3>Ordered Items</h3>
       <thead>
         <tr>
             <th>Product Name</th>
@@ -59,6 +112,8 @@
     </table>
     
   </div>
+
+  
 
 <?php include 'includes/footer.php'; ?>
 
