@@ -1,6 +1,6 @@
 <?php 
-    include 'includes/header2.php';
     include 'config/functions.php';
+    include 'includes/header2.php';
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/cart-shop.css">
 

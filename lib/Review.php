@@ -30,9 +30,10 @@ class Review {
         $user_id = $this->db->con->real_escape_string($data['user_id']);
         $rating = $this->db->con->real_escape_string($data['rating']);
         $review = $this->db->con->real_escape_string($data['review']);
+        $date_created = $this->db->con->real_escape_string($data['date_created']);
 
         $result = $this->db->con->query("
-            INSERT INTO reviews (product_id, user_id, rating, review) VALUES('$product_id', '$user_id', '$rating', '$review')
+            INSERT INTO reviews (product_id, user_id, rating, review, date_created) VALUES('$product_id', '$user_id', '$rating', '$review', '$date_created')
         ");
 
         if ($result) echo 'success';

@@ -63,12 +63,12 @@
           <div class="col-md-4 order-md-2 mb-4">
             <h4 class="d-flex justify-content-between align-items-center mb-3">
               <span class="text-muted">Your cart</span>
-              <span class="badge badge-secondary badge-pill"><?php echo $cartItemCount;?></span>
+              <span class="badge badge-secondary badge-pill"><?php //echo $cartItemCount;?></span>
             </h4>
             <ul class="list-group mb-3">
               <?php
                   $total = 0;
-                  foreach ($cart->getUserCart(1) as $cart):
+                  foreach ($cart->getUserCart($_SESSION['id']) as $cart):
                   $total+=$cart['total'];
 
     
