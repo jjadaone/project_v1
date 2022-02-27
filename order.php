@@ -1,3 +1,4 @@
+<link rel="stylesheet" type="text/css" href="assets/css/order-style.css">
 <?php 
    
     include 'config/functions.php';
@@ -101,20 +102,20 @@
               }
             ?>
             <form class="needs-validation" method="POST">
-              <div class="row">
+              <div class="row1">
               <div class="mb-3">
-                <label for="address">Address</label>
+                <label for="Address">Address</label>
                 <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" value="<?php echo (isset($addressValue) && !empty($addressValue)) ? $addressValue:'' ?>">
               </div>
-              <div class="row">
+              <div class="row1">
                 <div class="col-md-5 mb-3">
-                  <label for="city">city</label>
-                  <input type="text" class="form-control" id="city" name="city" placeholder="city" value="<?php echo (isset($cityValue) && !empty($cityValue)) ? $cityValue:'' ?>">
+                  <label for="City">City</label>
+                  <input type="text" class="form-control" id="city" name="city" placeholder="City" value="<?php echo (isset($cityValue) && !empty($cityValue)) ? $cityValue:'' ?>">
                 </div>
     
                 <div class="col-md-3 mb-3">
                   <label for="zip">Zip</label>
-                  <input type="text" class="form-control" id="zip" name="zipcode" placeholder="" value="<?php echo (isset($zipCodeValue) && !empty($zipCodeValue)) ? $zipCodeValue:'' ?>" >
+                  <input type="text" class="form-control" id="zip" name="zipcode" placeholder="ZIP" value="<?php echo (isset($zipCodeValue) && !empty($zipCodeValue)) ? $zipCodeValue:'' ?>" >
                 </div>
               </div>
               <hr class="mb-4">
@@ -135,3 +136,4 @@
           
         </div>
 </div>
+

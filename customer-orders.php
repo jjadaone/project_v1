@@ -2,6 +2,7 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
+<link rel="stylesheet" type="text/css" href="assets/css/order-style.css">
 <div style="margin: 55px"></div>
   <div class="container">
     <table class="table table-striped table-dark">

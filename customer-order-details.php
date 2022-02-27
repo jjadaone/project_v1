@@ -4,6 +4,7 @@
 ?>
 <!-- Page content wrapper-->
 
+<link rel="stylesheet" type="text/css" href="assets/css/order-style.css">
 <!-- Page content-->
 <div class="container-fluid">
     <table class="table table-striped table-dark">

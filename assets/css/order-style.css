@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+
+
+.container, .container-fluid{
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}
+
+.container-fluid h3{
+    font-family: 'Akira Expanded';
+}
+
+/*ORDER.PHP STYLE*/
+
+.mt-3 h4{
+    font-family: 'Akira Expanded';
+}
+
+.mt-3{
+    padding: 20px;
+}
+
+.order-md-1{
+    align-items: left;
+}
+.order-md-1 input[type="text"]{
+   
+    height: 40px;
+    font-size: 16px;
+    color: #595959;
+    border: 1px solid #595959;
+    box-sizing: border-box;
+    border-radius: 5px;
+
+    color: #000;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+}
+
+.mb-3, .my-3 label{
+    font-size: 25px;
+}
+
+.order-md-1 button{
+    text-transform: uppercase;
+    font-weight: bold;
+    width: 350px;
+    height: 55px;
+    background: #C80000;
+    line-height: 20px;
+    font-size: 18px;
+    color: #FFF;
+    margin: 25px 0;
+}
+
+

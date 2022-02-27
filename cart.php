@@ -2,7 +2,7 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
-<link rel="stylesheet" type="text/css" href="assets/css/cart-style.css">
+<link rel="stylesheet" type="text/css" href="assets/css/cart-shop.css">
 
 <div class="container">
     
