@@ -106,12 +106,10 @@
                 <label for="address">Address</label>
                 <input type="text" class="form-control" id="address" name="address" placeholder="1234 Main St" value="<?php echo (isset($addressValue) && !empty($addressValue)) ? $addressValue:'' ?>">
               </div>
-
               <div class="row">
                 <div class="col-md-5 mb-3">
                   <label for="city">city</label>
                   <input type="text" class="form-control" id="city" name="city" placeholder="city" value="<?php echo (isset($cityValue) && !empty($cityValue)) ? $cityValue:'' ?>">
-
                 </div>
     
                 <div class="col-md-3 mb-3">
@@ -129,7 +127,6 @@
                   <label class="custom-control-label" for="cashOnDelivery">Cash on Delivery</label>
                 </div>
               </div>
-            
               <hr class="mb-4">
               <button class="btn btn-primary btn-lg btn-block" type="submit" name="submit" value="submit">Continue to checkout</button>
             </form>
