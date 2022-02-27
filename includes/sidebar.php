@@ -36,8 +36,8 @@
                     <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-index.php"><i class="fa fa-dashboard" style="font-size:30px;"></i> Dashboard</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-product.php"><i class="fa fa-product-hunt" style="font-size:30px;" aria-hidden="true"></i>roduct Details</a>
                     <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-new-product.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Product</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="#!">Events</a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="#!">Profile</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-category.php"><i class="fas fa-list-alt" style="font-size:30px;"></i> Category</a>
+                    <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-new-category.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Category</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-4" href="#!">Status</a>
          
                 </div>

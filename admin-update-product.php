@@ -19,7 +19,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Image</th>
-                                        <td><input type="file" name="image" id="image value="<?php echo $product['image']; ?>"></td>
+                                        <td><input type="file" name="image" id="image value="<?php echo $product['image']; ?>"><label><?php echo $product['image']; ?></label></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Product Name</th>
