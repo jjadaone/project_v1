@@ -1,6 +1,6 @@
 <?php 
-    include 'includes/header2.php';
     include 'config/functions.php';
+    include 'includes/header2.php'; 
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/item-view.css">
 
@@ -44,6 +44,7 @@
 
     <div class="reviews">
     <h2>CUSTOMER REVIEWS</h2>
+    <button style="width: 200px;"><a href="create-review.php?id=<?php echo $_GET['id'] ?>">Write a review</a></button>
         <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
         <div class="review">
             <h5>
