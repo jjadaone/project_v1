@@ -27,7 +27,7 @@ if (isset($_GET['order_id'], $_GET['status']))
         $order->updateOrderStatus($data);
     }
 
-    header("Location: admin-orders.php");
+    header("Location: admin-show-orders.php");
 
 
 ?>

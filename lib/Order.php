@@ -7,13 +7,44 @@ class Order {
         $this->db = $db;
     }
 
-    public function getOrders() {
+    public function getOrders($user_id = null) {
+
+        if ($user_id == null) {
+            $result = $this->db->con->query("
+                SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
+                FROM orders
+                INNER JOIN users
+                ON users.user_id = orders.user_id
+            ");
+        } else {
+            $result = $this->db->con->query("
+                SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
+                FROM orders
+                INNER JOIN users
+                ON users.user_id = orders.user_id
+                WHERE users.user_id = $user_id
+            ");
+        }
+
+
+        $resultArray = array();
+
+        while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $order;
+        }
+
+        return $resultArray;
+    }
+
+    public function getSingleOrder($order_id) {
         $result = $this->db->con->query("
-            SELECT orders.order_id, orders.total_price, users.first_name, users.last_name, address, city, zipcode, order_status, order_date
-            FROM orders
+            SELECT * FROM orders 
             INNER JOIN users
             ON users.user_id = orders.user_id
+            WHERE orders.order_id=$order_id
         ");
+
+        $resultArray = array();
 
         while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
             $resultArray[] = $order;

@@ -9,7 +9,7 @@
         $newQuantities = $_POST['quantity'];
 
         // update the cart quantities
-        foreach ($cart->getUserCart(1) as $index => $cart_item) {
+        foreach ($cart->getUserCart($_SESSION['id']) as $index => $cart_item) {
             // $cart->updateQuantities($cart_item['cart_id'], $newQuantities[$x], 1);
             $cart->updateQuantities($cart_item['product_id'], $newQuantities[$index], $_SESSION['id']);
             header("Location: cart.php");   

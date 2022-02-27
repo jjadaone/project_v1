@@ -41,7 +41,7 @@ class Product {
         $category_id = $this->db->con->real_escape_string($data['category_id']);
         $price = $this->db->con->real_escape_string($data['price']);
         $image = $data['image'];
-        echo $image;
+        // echo $image;
         $quantity = $this->db->con->real_escape_string($data['quantity']);
         $description = $this->db->con->real_escape_string($data['description']);
         
@@ -51,8 +51,8 @@ class Product {
             VALUES ('$product_name', '$category_id', '$price', '$quantity', '$description','$image')
         ");
 
-        if ($result) echo 'sucess';
-        else echo 'fail add';
+        // if ($result) echo 'sucess';
+        // else echo 'fail add';
 
     }
     public function updateProduct($data) {
@@ -61,16 +61,17 @@ class Product {
         $product_name = $this->db->con->real_escape_string($data['product_name']);
         $category_id = $this->db->con->real_escape_string($data['category_id']);
         $price = $this->db->con->real_escape_string($data['price']);
+        $image = $data['image'];
         $quantity = $this->db->con->real_escape_string($data['quantity']);
         $description = $this->db->con->real_escape_string($data['description']);
 
 
         $result = $this->db->con->query("
             UPDATE products 
-            SET product_name='$product_name', category_id='$category_id', price = '$price', quantity = '$quantity', description='$description' where product_id=$product_id");
+            SET product_name='$product_name', category_id='$category_id', price = '$price', quantity = '$quantity', description='$description', image='$image' where product_id=$product_id");
     
-        if ($result) echo 'succ prod';
-        else echo 'fail prod';
+        // if ($result) echo 'succ prod';
+        // else echo 'fail prod';
     }
 
     public function deleteProduct($id) {
@@ -87,6 +88,17 @@ class Product {
 
         if ($result) echo 'success quantity decrease';
         else echo 'fail decrease';
+    }
+
+    public function increaseQuantity($product_id, $order_quantity) {
+        $result = $this->db->con->query("
+            UPDATE products
+            SET quantity = quantity + $order_quantity 
+            WHERE product_id = $product_id
+        ");
+
+        if ($result) echo 'success quantity increase';
+        else echo 'fail increase';
     }
 
 

@@ -7,13 +7,24 @@
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Create New Product</th>
+                            
                                 <tbody>
                                         <th scope="row"><label for="new-product">Product name</label></th>
                                         <td><input type="text" name="product_name" required></td>
                                         </tr>
                                         <tr>
                                         <th scope="row"><label for="category">Category</label></th>
-                                        <td><input type="text" name="category_id" required></td>
+                                        
+                                        <td><select name= category_id>
+                                        <?php foreach ($category->getCategories() as $category): ?>
+
+                                            <option value="<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?>  
+                                            <?php endforeach; ?>
+                                        
+                                        </option>
+                                        </select>
+                                        </td>
+                                        
                                         </tr>
                                         <tr>
                                         <th scope="row"><label for="price">Price</label></th>
@@ -33,7 +44,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row"></th>
-                            
+                                
                                         <td><button type="submit" name="addProduct">Submit</button> </td>
                                         </tr>
                                         
@@ -52,7 +63,7 @@
                         $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
 
                         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-                            echo "The file".basename( $_FILES["image"]["name"]). " has been uploaded.   ";
+                            // echo "The file".basename( $_FILES["image"]["name"]). " has been uploaded.   ";
                         } else {
                             echo "Sorry, there was an error uploading your file.";
                         }

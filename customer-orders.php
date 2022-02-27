@@ -24,7 +24,7 @@
       <tbody>
       <form>
         <tr>
-        <?php foreach ($order->getOrders() as $order): ?>
+        <?php foreach ($order->getOrders($_SESSION['id']) as $order): ?>
           <th scope="row"><?php echo $order['order_id']; ?></th>
           <td><?php echo $order['total_price']; ?></td>
           <td><?php echo $order['first_name']; ?></td>
@@ -35,17 +35,11 @@
           <td><?php echo $order['order_status']; ?></td>
           <td><?php echo $order['order_date']; ?></td>    
           <td>
-            <a class="btn btn-secondary" href ="">Details</a>
-            <div class="btn-group">
-              <button class="btn btn-success dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
-                Status
-              </button>
-              <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
-                <li><a class="dropdown-item" href="admin-update-order.php?order_id=<?php echo $order['order_id']; ?>&status=delivered">Delivered</a></li>
-                <li><a class="dropdown-item" href="admin-update-order.php?order_id=<?php echo $order['order_id']; ?>&status=canceled">Canceled</a></li>
-              </ul>
-            </div>
-          </td>
+            <a class="btn btn-secondary" href="customer-order-details.php?order_id=<?php echo $order['order_id']; ?>&status=<?php echo $order['order_status']; ?>">Details</a>
+            <?php if ($order['order_status'] != 'canceled' && $order['order_status'] != 'delivered'): ?>
+                <a class="btn btn-danger" href="customer-order-cancellation.php?order_id=<?php echo $order['order_id']; ?>&status=canceled">Cancel Order</a>
+            <?php endif; ?>
+        </td>
         </tr>
         <?php endforeach; ?>
         </form>

@@ -33,7 +33,7 @@
             </div>
             <input type="checkbox" id="click">
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
-                <ul>
+            <ul>
                     <li><a class="active" href="index.php">Home</a></li>
                     <li><a href="/project_v1/index.php #about">About</a></li>
                     <!--<li><a href="#">Gallery</a></li>
@@ -41,22 +41,26 @@
                     <?php 
                     if ($_SESSION) {
                         if ($_SESSION['id']) {
+                            echo '<li><a href="customer-orders.php">Orders</a></li>';
                             echo '<li><a href="?action=logout">Logout</a></li>';
+                            
                             if (isset($_GET['action'])) {
                                 session_destroy();
                                 header("location:index.php");
                             }
+                            echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
                         } 
-                    } else {
+                    }
+                    else {
                         echo '<li><a href="login.php">Login</a></li>';
                         echo '<li><a href="register.php">Register</a></li>';
+                        
                     }
                     
+                    
                     ?>    
-                        <div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>
-                        <div class="cart-nav">
-                        <div class="item-numb"><li><a>0</a></li></div>
-                        </div>
+                  <li  class="item-numb"><a><?php //echo $_SESSION ? $cart->countCart($_SESSION['id'])[0]['sum_total'] : 0; ?></a></li>
+
                </ul>
         </nav>
     </div>  

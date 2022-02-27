@@ -35,7 +35,7 @@
         </div>
     </div>
 
-    <div class="container-1" id="about">
+    <div class="container-1">
         <div class="aboutus_content-left">
             <img src="assets/images/cc/about.png" alt="about us photo">
         </div>
