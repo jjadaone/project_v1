@@ -5,8 +5,9 @@
 <link rel="stylesheet" type="text/css" href="assets/css/cart-style.css">
 
 <div class="container">
-    <h1>CART</h1><br>
+    
     <div class="cart-contain">
+    <h1>CART</h1><br>
     <form action="update-cart.php" method="POST">
         <table class="cart-table">
             <thead>

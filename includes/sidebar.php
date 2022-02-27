@@ -32,13 +32,35 @@
             <!-- Sidebar-->
             <div  class="border border-dark" id="sidebar-wrapper">
                 <div class="sidebar-heading border-bottom bg-light">LOGO</div>
-                <div class="list-group list-group-flush ">
+                    <div class="list-group list-group-flush ">
                     <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-index.php"><i class="fa fa-dashboard" style="font-size:30px;"></i> Dashboard</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-product.php"><i class="fa fa-product-hunt" style="font-size:30px;" aria-hidden="true"></i>roduct Details</a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-new-product.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Product</a>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-category.php"><i class="fas fa-list-alt" style="font-size:30px;"></i> Category</a>
-                    <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-new-category.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Category</a>
+                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-orders.php"><i class='fas fa-shopping-bag' style='font-size:30px'></i></i>Orders</a>
+                    <div class="list-group-item list-group-item-action list-group-item-dark p-4">
+                        <div class="btn-group dropend">
+                            <a class="btn dropdown-toggle" role="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            <i class="fa fa-product-hunt" style="font-size:30px;" aria-hidden="true"></i>roduct</a>
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                            <li><a class="dropdown-item" href="admin-show-product.php">Product Details</a></li>
+                            <li><a class="dropdown-item" href="admin-new-product.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Product</a></li>    
+                        </ul>
+                        </div>
+                        </div>
+                    <div class="list-group-item list-group-item-action list-group-item-light p-4">
+                        <div class="btn-group dropend">
+                            <a class="btn dropdown-toggle" role="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
+                            <i class="fas fa-list-alt" style="font-size:30px;"></i>Category</a>
+                            </a>
+                        <ul class="dropdown-menu" aria-labelledby="defaultDropdown">
+                            <li><a class="dropdown-item" href="admin-show-category.php"></i> Categories</a></li>
+                            <li><a class="dropdown-item" href="admin-new-category.php"><i class="fa fa-plus" style="font-size:30px;" aria-hidden="true"></i> Add Category</a></li>    
+                        </ul>
+                        </div>
+                    </div>
                     <a class="list-group-item list-group-item-action list-group-item-light p-4" href="#!">Status</a>
+                    
+                    
+                   
          
                 </div>
             </div>
