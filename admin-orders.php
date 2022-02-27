@@ -35,7 +35,7 @@
           <td><?php echo $order['order_status']; ?></td>
           <td><?php echo $order['order_date']; ?></td>    
           <td>
-            <a class="btn btn-secondary" href ="">Details</a>
+            <a class="btn btn-secondary" href="admin-orders-detail.php?order_id=<?php echo $order['order_id']; ?>&status=delivered">Details</a>
             <div class="btn-group">
               <button class="btn btn-success dropdown-toggle" type="button" id="defaultDropdown" data-bs-toggle="dropdown" data-bs-auto-close="true" aria-expanded="false">
                 Status

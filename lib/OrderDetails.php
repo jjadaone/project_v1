@@ -27,6 +27,24 @@ class OrderDetails {
         else return false;
     }
 
+    public function getOrderDetails($order_id) {
+        $result = $this->db->con->query("
+            SELECT product_name, price, order_details.quantity, total_price
+            FROM order_details
+            INNER JOIN products
+            ON products.product_id = order_details.product_id
+            WHERE order_details.order_id = $order_id     
+        ");
+
+        $resultArray = array();
+
+        while ($orderDetails = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $orderDetails;
+        }
+
+        return $resultArray;
+    }
+
     
 
 

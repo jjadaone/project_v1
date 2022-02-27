@@ -8,39 +8,53 @@
       <thead>
         <tr>
             <th>Order ID</th>
-            <!-- <th>Subtotal</th> -->
-            <!-- <th>Shipping Fee</th> -->
-            <th>Total</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Address</th>
-            <th>City</th>
-            <th>Zipcode</th>
-            <th>Status</th>
             <th>Order Date</th>
-            <th>Action</th>
+            <th>Status</th>
+            <th>
+              <?php 
+              if ($_GET['status'] == 'delivered') {
+                echo 'Delivery Date';
+              } else if ($_GET['status'] == 'canceled') {
+                echo 'Cancellation Date';
+              }
+              ?>
+          </th>
         </tr>
       </thead>
       <tbody>
       <form>
         <tr>
-        <?php foreach ($order->getOrders() as $order): ?>
+        <?php foreach ($order->getSingleOrder($_GET['order_id']) as $order): ?>
           <th scope="row"><?php echo $order['order_id']; ?></th>
-          <td><?php echo $order['total_price']; ?></td>
-          <td><?php echo $order['first_name']; ?></td>
-          <td><?php echo $order['last_name']; ?></td>
-          <td><?php echo $order['address']; ?></td>
-          <td><?php echo $order['city']; ?></td>
-          <td><?php echo $order['zipcode']; ?></td>
+          <td><?php echo $order['order_date']; ?></td>
           <td><?php echo $order['order_status']; ?></td>
-          <td><?php echo $order['created_at']; ?></td>    
           <td>
-            <a href ="">Details</a>
-            <a href="">Status</a>
+            <?php echo $order['order_status'] == 'delivered' ? $order['delivery_date'] : $order['cancellation_date']; ?>
           </td>
         </tr>
         <?php endforeach; ?>
         </form>
+      </tbody>
+    </table>
+
+    <table class="table table-striped table-dark">
+      <thead>
+        <tr>
+            <th>Product Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+        <?php foreach ($orderDetails->getOrderDetails($_GET['order_id']) as $order_details): ?>
+          <th scope="row"><?php echo $order_details['product_name']; ?></th>
+          <td><?php echo $order_details['price']; ?></td>
+          <td><?php echo $order_details['quantity']; ?></td>
+          <td><?php echo $order_details['total_price']; ?></td>
+        </tr>
+        <?php endforeach; ?>
       </tbody>
     </table>
     

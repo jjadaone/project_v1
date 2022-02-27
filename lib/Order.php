@@ -22,6 +22,18 @@ class Order {
         return $resultArray;
     }
 
+    public function getSingleOrder($order_id) {
+        $result = $this->db->con->query("
+            SELECT * FROM orders WHERE order_id=$order_id
+        ");
+
+        while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $order;
+        }
+
+        return $resultArray;
+    }
+
     public function addOrder($data) {
         
         $user_id = $data['user_id'];
