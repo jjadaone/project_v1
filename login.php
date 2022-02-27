@@ -13,7 +13,7 @@
             <input type="password" name="password" placeholder="PASSWORD">
             <button type="submit" name="login">Log In</button>      
         </form>
-        <p>NOT A MEMBER? <a href='/'>JOIN US<a></p>
+        <p>NOT A MEMBER? <a href='register.php'>JOIN US<a></p>
     </div>
     </main>
 </body>

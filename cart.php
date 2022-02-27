@@ -45,14 +45,15 @@
                     </div>
                 </td>
                 <td>
-                    <div class ="checkout">
-                    <a href="order.php"><button class="btn btn-primary btn-lg float-right">Checkout</button></a>
-                    </div>
+
                 </td>
 
             </tbody>  
         </table>
     </form>
+                    <div class ="checkout">
+                    <a href="order.php"><button class="btn btn-primary btn-lg float-right">Checkout</button></a>
+                    </div>
     </div>
                 
 </div>
