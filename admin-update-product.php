@@ -7,7 +7,7 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                       <div class ="container">
-                        <form action="admin-update-process-product.php" method="POST">
+                        <form action="admin-update-process-product.php" method="POST" enctype="multipart/form-data">
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Update Product</th>
@@ -19,7 +19,7 @@
                                         </tr>
                                         <tr>
                                         <th scope="row">Image</th>
-                                        <td><input type="file" name="image" value="<?php echo $product['image']; ?>"></td>
+                                        <td><input type="file" name="image" id="image value="<?php echo $product['image']; ?>"></td>
                                         </tr>
                                         <tr>
                                         <th scope="row">Product Name</th>
