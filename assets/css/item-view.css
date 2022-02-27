@@ -1,0 +1,63 @@
+@import url('http://fonts.cdnfonts.com/css/akira-expanded');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700;900&display=swap');
+
+.prod{
+    background-color: #dfdfdf;
+    padding: 5px;
+    padding-bottom: 50px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.container{
+    font-family: 'Montserrat';
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-2 img{
+    height: 700px;
+
+}
+ 
+
+.col-2 h1{
+    font-size: 50px;
+    font-family: 'Akira Expanded';
+}
+
+.price h2{
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.col-2 p{
+    font-size: 20px;
+}
+
+.rating{
+    padding-bottom: 40px;
+}
+
+.reviews{
+    background-color: #dfdfdf;
+    padding: 60px;
+    font-family: 'Montserrat';
+    display:flex;
+    flex-direction: column;
+}
+
+.reviews h2{
+    font-family: 'Akira Expanded';
+    padding-bottom: 40px;
+}
+
+
+hr{
+    height: 1px;
+    border: 0;
+    margin: 0;
+    padding: 0;
+}

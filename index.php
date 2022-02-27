@@ -54,13 +54,13 @@
         <div class="categories">
             <div class ="row">
                 <div class="col-3">
-                    <img src="assets/images/cc/category-1.jpg">
+                    <img src="assets/images/cc/category-1.jpg" alt="pants">
                 </div>
                 <div class="col-3">
-                    <img src="assets/images/cc/category-2.jpg" >
+                    <img src="assets/images/cc/category-2.jpg" alt="shirts">
                 </div>
                 <div class="col-3">
-                    <img src="assets/images/cc/category-3.jpg" >
+                    <img src="assets/images/cc/category-3.jpg" alt="shoes">
                 </div>
             </div>
             
