@@ -3,6 +3,7 @@
     include 'includes/header2.php';
     
 ?>
+ <link rel="stylesheet" type="text/css" href="assets/css/home.css">
 
 <div class="homepage">
     <div class="header">

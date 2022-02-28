@@ -15,30 +15,6 @@
         </div>
     </div>
 
-
-    
-<!-- <div>
-    <div class ="burger-sidebar">
-        <button onclick="openMenu()">
-                &#9776;
-                </button>
-    </div>
-    <aside class="sidebar">
-
-        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
-        <ul>
-        <h3>Categories</h3>
-        
-        <ul>
-            <li></li>
-        </ul>
-       
-        </ul>
-    </aside>
-</div> -->
-
-
-
     <div class="wrapper">
         <h1 class="title">CATEGORIES</h1>
       
@@ -56,19 +32,6 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-           
-            <!-- <div class ="row">
-                <div class="col-3">
-                    <img src="assets/images/cc/category-1.jpg" alt="pants">
-                </div>
-                <div class="col-3">
-                    <img src="assets/images/cc/category-2.jpg" alt="shirts">
-                </div>
-                <div class="col-3">
-                    <img src="assets/images/cc/category-3.jpg" alt="shoes">
-                </div>
-            </div> -->
-
             
         </div>
     </div>

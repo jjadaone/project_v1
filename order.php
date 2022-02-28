@@ -78,7 +78,7 @@
                               <h6 class="my-0"><?php echo $cart['product_name']; ?></h6>
                               <small class="text-muted">Quantity: <?php echo $cart['cart_quantity']; ?> X Price: <?php echo $cart['price']; ?></small>
                           </div>
-                          <span class="text-muted">$<?php echo $cart['total']; ?></span>
+                          <span class="text-muted">₱<?php echo $cart['total']; ?></span>
                       </li>
               <?php
                   endforeach;
