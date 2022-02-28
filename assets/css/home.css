@@ -87,3 +87,9 @@ h1{
 }
 
 
+.row .slider{
+    display:flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}

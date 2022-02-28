@@ -4,8 +4,8 @@
 ?>
 
 
-
-<div>
+<link rel="stylesheet" type="text/css" href="assets/css/login-register.css">
+<div class="container">
     <form action="create-review.php" method="POST">
         <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
         <label for="rating">Rating</label>

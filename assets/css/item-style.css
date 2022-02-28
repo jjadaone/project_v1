@@ -61,3 +61,24 @@ hr{
     margin: 0;
     padding: 0;
 }
+
+.create-btn a{
+    text-transform: uppercase;
+}
+
+.create-btn a:link{
+    text-decoration: none;
+    color: white;
+}
+
+.create-btn button:hover {
+    color: white;
+    text-decoration: none;
+    background-color: #C80000;
+}
+
+.review{
+    padding: 20px;
+    font-family: 'Montserrat', sans-serif;
+    height: 100vh;
+}

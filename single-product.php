@@ -2,7 +2,7 @@
     include 'config/functions.php';
     include 'includes/header2.php'; 
 ?>
-<link rel="stylesheet" type="text/css" href="assets/css/item-view.css">
+<link rel="stylesheet" type="text/css" href="assets/css/item-style.css">
 
 <body>
 <div class="prod">
@@ -12,8 +12,7 @@
                 <?php foreach ($product->getSingleProduct($_GET['id']) as $product): ?>
                 
                     <div class="col-2">
-                    <img src="assets/images/cc/shirt-temp/shirt-temp1.jpg"></img>
-                        <?php echo $product['image']; ?>
+                    <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
                     </div>
                     <div class="col-2">
                         <h1><?php echo $product['product_name']; ?></h1>
@@ -43,24 +42,26 @@
     <hr>
 
     <div class="reviews">
-    <h2>CUSTOMER REVIEWS</h2>
-    <button style="width: 200px;"><a href="create-review.php?id=<?php echo $_GET['id'] ?>">Write a review</a></button>
-        <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
-        <div class="review">
-            <h5>
-            <div class="rating">
-                <?php for($i=0; $i < $review['rating']; $i++) { ?>
-                    <i class="fa fa-star" <?php echo $i; ?>></i>
-                <?php } ?>
-            </div>
-            </h5>
-            <strong><?php echo $review['username']; ?></strong>
-            <p><?php echo $review['review']; ?></p>
-            <p><?php echo $review['date_created']; ?></p>
+        <h2>CUSTOMER REVIEWS</h2>
+        <div class="create-btn">
+            <button><a href="create-review.php?id=<?php echo $_GET['id'] ?>">Write a review</a></button>
         </div>
-        <?php endforeach; ?>
+        <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
+            <div class="review">
+                <h5>
+                <div class="rating">
+                    <?php for($i=0; $i < $review['rating']; $i++) { ?>
+                        <i class="fa fa-star" <?php echo $i; ?>></i>
+                    <?php } ?>
+                </div>
+                </h5>
+                <strong><?php echo $review['username']; ?></strong>
+                <p><?php echo $review['review']; ?></p>
+                <p><?php echo $review['date_created']; ?></p>
+            </div>
+            <?php endforeach; ?>
     </div>
-
+                  
 </div>
 
 </body>
