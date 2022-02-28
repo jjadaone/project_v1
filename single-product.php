@@ -44,7 +44,14 @@
 
     <div class="reviews">
     <h2>CUSTOMER REVIEWS</h2>
-    <button style="width: 200px;"><a href="create-review.php?id=<?php echo $_GET['id'] ?>">Write a review</a></button>
+    <?php if($_SESSION): ?>
+        <?php if ($review->isReviewExists($_GET['id'], $_SESSION['id'])): ?>
+            <button style="width: 200px;"><a href="update-review.php?id=<?php echo $_GET['id'] ?>">Change your review</a></button>
+        <?php else : ?> 
+            <button style="width: 200px;"><a href="create-review.php?id=<?php echo $_GET['id'] ?>">Write a review</a></button>
+        <?php endif; ?>
+    <?php endif; ?>
+    
         <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
         <div class="review">
             <h5>
@@ -59,6 +66,7 @@
             <p><?php echo $review['date_created']; ?></p>
         </div>
         <?php endforeach; ?>
+
     </div>
 
 </div>
