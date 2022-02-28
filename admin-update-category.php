@@ -7,7 +7,7 @@
                 <!-- Page content-->
                 <div class="container-fluid">
                       <div class ="container">
-                        <form action="admin-update-process-category.php" method="POST">
+                        <form action="admin-update-process-category.php" method="POST" enctype="multipart/form-data">
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Update Category</th>
@@ -24,6 +24,11 @@
                                         <th scope="row">Category Description</th>
                                         <td><input type="text" name="category_description" value="<?php echo $category['category_description']; ?>"></td>
                                         </tr>
+                                        <tr>
+                                        <th scope="row">Image</th>
+                                        <td><input type="file" name="category_image" id="image value="<?php echo $category['category_image']; ?>"><label><?php echo $category['category_image']; ?></label></td>
+                                        </tr>
+                                
                                     
                                         <?php endforeach; ?>
                                         <td><button type="submit" name="updateCategory">Submit</button> </td>

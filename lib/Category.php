@@ -36,11 +36,11 @@ class Category {
     public function addCategories($data) {
         $category_name = $this->db->con->real_escape_string($data['category_name']);
         $category_description = $this->db->con->real_escape_string($data['category_description']);
-        
+        $category_image = $data['category_image'];
 
         $result = $this->db->con->query("
-            INSERT INTO categories(category_name, category_description) 
-            VALUES ('$category_name', '$category_description')
+            INSERT INTO categories(category_name, category_description,category_image) 
+            VALUES ('$category_name', '$category_description', '$category_image')
         ");
 
         // if ($result) echo 'sucess';
@@ -53,10 +53,11 @@ class Category {
         $category_id = $this->db->con->real_escape_string($data['category_id']);
         $category_name = $this->db->con->real_escape_string($data['category_name']);
         $category_description = $this->db->con->real_escape_string($data['category_description']);
+        $category_image = $data['category_image'];
         
         $result = $this->db->con->query("
             UPDATE categories 
-            SET category_name='$category_name', category_description='$category_description' where category_id=$category_id");
+            SET category_name='$category_name', category_description='$category_description', category_image='$category_image' where category_id=$category_id");
     
         // if ($result) echo 'succ prod';
         // else echo 'fail prod';

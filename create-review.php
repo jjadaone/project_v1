@@ -7,13 +7,16 @@
 
 <div>
     <form action="create-review.php" method="POST">
-        <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
-        <label for="rating">Rating</label>
-        <input type="number"  name="rating" min="1" max="5">
-        <label for="review">Review</label>
-        <input type="text" name="review">
-        <input type="submit" name="submit-review" value="Submit Review">
+    <table class="table table-striped table-hover table-dark">
+    <input type="hidden" name="product_id" value="<?php echo $_GET['id']; ?>">
+    <th scope="row"><label for="rating">Rating</label></th>
+    <td><input type="number"  name="rating" min="1" max="5" required placeholder="1-5"></td>
+    <th scope="row"><label for="review">Review</label></th>
+    <td><textarea type="text" name="review" required></textarea></td>
+        
+    <td><input class="btn btn-primary" type="submit" name="submit-review" value="Submit Review"></td>
     </form>
+    </table>
 </div>
 
 <?php

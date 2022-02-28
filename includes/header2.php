@@ -48,7 +48,9 @@
                                 session_destroy();
                                 header("location:index.php");
                             }
+                            echo '<li><a href="user-profile.php"class="fa fa-user" aria-hidden="true"></a></li>';
                             echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
+                            
                         } 
                     }
                     else {

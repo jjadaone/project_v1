@@ -41,58 +41,39 @@ class User {
 
         if ($result) return true;
     }
+    public function getUserProfile($id) {
+        $result = $this->db->con->query("SELECT * FROM users WHERE user_id=$id");
+    
+        $resultArray = array();
+    
+        while ($item = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $item;
+        }
+    
+        return $resultArray;
+    }
+    public function updateUser($data) {
 
+        $user_id = $this->db->con->real_escape_string($data['user_id']);
+        $first_name = $this->db->con->real_escape_string($data['first_name']);
+        $last_name = $this->db->con->real_escape_string($data['last_name']);
+        // $email = $this->db->con->real_escape_string($data['email']);
+        $contact = $this->db->con->real_escape_string($data['contact']);
+        $birthdate = $this->db->con->real_escape_string($data['birthdate']);
+
+
+
+        $result = $this->db->con->query("
+            UPDATE users
+            SET first_name='$first_name', last_name='$last_name',contact = '$contact', birthdate='$birthdate' where user_id=$user_id");
+    
+        // if ($result) echo 'succ prod';
+        // else echo 'fail prod';
+    }
+    
 }
 
-
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <!-- public function addProduct($query) {
         $result = $this->db->con->query($query);

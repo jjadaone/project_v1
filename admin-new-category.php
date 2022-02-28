@@ -3,7 +3,7 @@
         <div class="container-fluid">
                 <body>
                     <div class ="container">
-                        <form action="admin-new-category-process.php" method="POST">
+                        <form action="admin-new-category-process.php" method="POST" enctype="multipart/form-data">
                             <table  class="table table-striped table-hover table-dark">
                             <thead>
                             <th>Create New Category</th>
@@ -22,6 +22,10 @@
                                         <tr>
                                         <th scope="row"><label for="category_description">Description</label></th>
                                         <td><textarea type="text" name="category_description"required></textarea></td>
+                                        </tr>
+                                        <tr>
+                                        <th scope="row"><label for="image">Upload Image</label></th>
+                                        <td><input type="file" name="category_image" id="category_image"></td>
                                         </tr>
                                 
                                         <td><button type="submit" name="addCategory">Submit</button> </td>

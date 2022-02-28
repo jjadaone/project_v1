@@ -4,26 +4,6 @@
     
 ?>
 
-<!-- <div>
-    <div class ="burger-sidebar">
-        <button onclick="openMenu()">
-                &#9776;
-                </button>
-    </div>
-    <aside class="sidebar">
-
-        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
-        <ul>
-        <h3>Categories</h3>
-        <?php foreach ($category->getCategories() as $category): ?>
-        <ul>
-            <li><a href="category.php?id=<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></a></li>
-        </ul>
-        <?php endforeach; ?>
-        </ul>
-    </aside>
-</div> -->
-
 <div class="homepage">
     <div class="header">
         <div class="container">
@@ -34,8 +14,8 @@
             </div>
         </div>
     </div>
-    
-    <div class="container-1" id="about">
+
+    <div class="container-1">
         <div class="aboutus_content-left">
             <img src="assets/images/cc/about.png" alt="about us photo">
         </div>
@@ -47,12 +27,48 @@
         </div>"
     </div>
 
+    
+<!-- <div>
+    <div class ="burger-sidebar">
+        <button onclick="openMenu()">
+                &#9776;
+                </button>
+    </div>
+    <aside class="sidebar">
+
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+        <h3>Categories</h3>
+        
+        <ul>
+            <li></li>
+        </ul>
+       
+        </ul>
+    </aside>
+</div> -->
+
 
 
     <div class="wrapper">
         <h1 class="title">CATEGORIES</h1>
+      
         <div class="categories">
-            <div class ="row">
+            <div class="row">
+            <?php foreach ($category->getCategories() as $category): ?>
+                <div class ="col">
+                    <div class="col-4">
+                        
+    
+                    <a href="category.php?id=<?php echo $category['category_id']; ?>">
+                    <img src="<?php dirname(__FILE__); ?>assets/categories/<?php echo $category['category_image']; ?>" alt="" style="width:500px; height:100%">
+                    </a>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+           
+            <!-- <div class ="row">
                 <div class="col-3">
                     <img src="assets/images/cc/category-1.jpg" alt="pants">
                 </div>
@@ -62,7 +78,8 @@
                 <div class="col-3">
                     <img src="assets/images/cc/category-3.jpg" alt="shoes">
                 </div>
-            </div>
+            </div> -->
+
             
         </div>
     </div>
