@@ -105,6 +105,23 @@ class Order {
         if ($result) echo 'success status change';
         else echo 'fail sttus change';
     }
+
+    public function getTotalSales() {
+        $result = $this->db->con->query("
+            SELECT year(delivery_date), month(delivery_date) as mnth, sum(total_price) as total 
+            FROM orders 
+            WHERE order_status='delivered'
+            GROUP BY month(delivery_date) 
+        ");
+
+        $resultArray = array();
+
+        while ($order = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
+            $resultArray[] = $order;
+        }
+
+        return $resultArray;
+    }
     
 
 
