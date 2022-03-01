@@ -43,27 +43,32 @@
 
     if (isset($_POST['register'])) {
 
-
         $first_name = $_POST['first_name'];
-        $last_name = $_pOST['last_name'];
+        $last_name = $_POST['last_name'];
         $username = $_POST['username'];
         $password = $_POST['password'];
         $email = $_POST['email'];
-        $gender = $_POST['gender'];
+        $gender = empty($_POST['gender']) ? '' : $_POST['gender'];
         $birthdate = $_POST['birthdate'];
+        if (!empty($first_name) && !empty($last_name) && !empty($username)
+        && !empty($password) && !empty($email) && !empty($gender) && !empty($birthdate)) {
+            $data = [
+                'first_name' => $first_name,
+                'last_name' => $last_name,
+                'username' => $username,
+                'password' => $password,
+                'email' => $email,
+                'gender' => $gender,
+                'birthdate' => $birthdate
+            ];
+    
+            $user->register($data);
+            header("Location: login.php");
+        } else {
+            echo 'Please fill all the fields';
+        }
 
-        $data = [
-            'first_name' => $first_name,
-            'last_name' => $last_name,
-            'username' => $username,
-            'password' => $password,
-            'email' => $email,
-            'gender' => $gender,
-            'birthdate' => $birthdate
-        ];
 
-        $user->register($data);
-        header("Location: login.php");
     }
 
 

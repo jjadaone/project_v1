@@ -22,10 +22,18 @@
 <?php
     if (isset($_POST['login'])) {
         $user = $user->login($_POST['username'], $_POST['password']);
-        if (is_array($user)) {
-            $_SESSION['id'] = $user[0]['user_id'];
-            $_SESSION['username'] = $user[0]['username'];
-            header("Location:index.php");
+        if (is_array($user) && $user) {
+            if ($user[0]['role'] == 'admin') {
+                $_SESSION['id'] = $user[0]['user_id'];
+                $_SESSION['username'] = $user[0]['username'];
+                $_SESSION['loggedin'] == true;
+                header("Location:admin-index.php");
+            } else {
+                $_SESSION['id'] = $user[0]['user_id'];
+                $_SESSION['username'] = $user[0]['username'];
+                $_SESSION['loggedin'] == true;
+                header("Location:index.php");
+            }
         } else {
             echo 'wrong username and password';
         }
