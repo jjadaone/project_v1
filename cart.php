@@ -24,7 +24,7 @@
             <tbody>
                 <tr>
                 <?php foreach ($cart->getUserCart($_SESSION['id']) as $cart): ?>
-                    <td><img style="width: 200px; height: 100px;" src="https://helpx.adobe.com/content/dam/help/en/photoshop/using/convert-color-image-black-white/jcr_content/main-pars/before_and_after/image-before/Landscape-Color.jpg" alt="no image"></td>
+                    <td><img style="height:120px;"src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $cart['image']; ?>" alt="">
                     <td><?php echo $cart['product_name']; ?></td>
                     <td><?php echo $cart['price']; ?></td>
                     <td><input type="text" name="quantity[]" value="<?php echo $cart['cart_quantity']; ?>"></td>           

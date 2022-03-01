@@ -9,8 +9,8 @@
     flex-direction: column;
     
 }
-.header .container {
-    height: 130vh;
+.header .container .wrapper{
+    height: 100vh;
 }
 
 .header_container-image {
@@ -22,50 +22,13 @@
     width: 1300px;
 }
 
-.container-1 {
-    display:flex;
-    justify-content: center;
-    align-items: center;
+.header{
+    padding-bottom:20px;
+}
+
+.wrapper {
     padding-top: 20px;
-    padding-left: 150px;
-}
-
-
-.aboutus_content-left{
-    display:flex;
-    justify-content: center;
-    align-items: center;
-    padding-left: 50px;
-}
-.aboutus_content-left img{
-    width: 600px;
-}
-
-.aboutus_content-right{
-    margin: 0 180px 0 50px;
-    text-align: center;
-}
-.aboutus_content-right h1{
-    font-weight: 900;
-    font-family: 'Akira Expanded', sans-serif;
-}
-
-.aboutus_content-right p{
-    margin: 25px 50px;
-}
-
-.aboutus_content-right button{
-    width: 230px;
-    height: 70px;
-}
-
-.aboutus_content-right a:link {
-    color: white;
-    text-decoration: none;
-}
-.aboutus_content-right a:visited {
-    color: white;
-    text-decoration: none;
+ 
 }
 
 .title{
@@ -87,9 +50,8 @@ h1{
 }
 
 
-.row .slider{
-    display:flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.prod-pic{
+    height: 100vh;
 }
+
+

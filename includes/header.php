@@ -28,7 +28,7 @@
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="about.php">About</a></li>
                     <!--<li><a href="#">Gallery</a></li>
                     <li><a href="#">Feedback</a></li>-->
                     <?php 
@@ -41,7 +41,10 @@
                                 session_destroy();
                                 header("location:index.php");
                             }
-                            echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
+                            echo '<li><a href="user-profile.php"class="fa fa-user" aria-hidden="true"></a></li>';
+                            echo '<li><a href="cart.php"class="fa fa-shopping-cart"></a></li>';
+                            
+
                         } 
                     }
                     else {

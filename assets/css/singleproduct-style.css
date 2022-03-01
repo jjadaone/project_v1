@@ -15,7 +15,9 @@
     display:flex;
     justify-content: center;
     align-items: center;
+    height: 100vh;
 }
+
 
 .col-2 img{
     height: 700px;
@@ -41,14 +43,22 @@
     padding-bottom: 40px;
 }
 
+
 .reviews{
     background-color: #dfdfdf;
     padding: 60px;
     font-family: 'Montserrat';
     display:flex;
     flex-direction: column;
+    
 }
 
+.container2 .smallcontainer2{
+    height: 100vh;
+}
+.small-container{
+    padding-bottom:80px;
+}
 .reviews h2{
     font-family: 'Akira Expanded';
     padding-bottom: 40px;
@@ -62,8 +72,14 @@ hr{
     padding: 0;
 }
 
+.create-btn button{
+		color: #FFFFFF;
+		width: 300px;
+}
+
 .create-btn a{
     text-transform: uppercase;
+    color: white;
 }
 
 .create-btn a:link{
@@ -80,5 +96,5 @@ hr{
 .review{
     padding: 20px;
     font-family: 'Montserrat', sans-serif;
-    height: 100vh;
+
 }

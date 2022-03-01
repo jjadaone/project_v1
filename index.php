@@ -3,26 +3,6 @@
     include 'includes/header.php';
     
 ?>
-
-<!-- <div>
-    <div class ="burger-sidebar">
-        <button onclick="openMenu()">
-                &#9776;
-                </button>
-    </div>
-    <aside class="sidebar">
-
-        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
-        <ul>
-        <h3>Categories</h3>
-        <?php foreach ($category->getCategories() as $category): ?>
-        <ul>
-            <li><a href="category.php?id=<?php echo $category['category_id']; ?>"><?php echo $category['category_name']; ?></a></li>
-        </ul>
-        <?php endforeach; ?>
-        </ul>
-    </aside>
-</div> -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="homepage">
@@ -35,25 +15,47 @@
             </div>
         </div>
     </div>
+
+
     
-    <div class="container-1" id="about">
-        <div class="aboutus_content-left">
-            <img src="assets/images/cc/about.png" alt="about us photo">
-        </div>
-        <div class="aboutus_content-right">
-            <h1>WHO ARE WE?</h1>
-            <p>Cloth Chasing Clothing is a clothing line retailer that has a product line of streeetwear graphic shirts, techwear clothes and accessories. We aim to bring international designs to the Philippines and collaborate it with local designs. 
-                Let’s chase trends together.</p>
-            <button type="button"><a href="#shop-now">SHOP NOW</a></button>
-        </div>"
+<!-- <div>
+    <div class ="burger-sidebar">
+        <button onclick="openMenu()">
+                &#9776;
+                </button>
     </div>
+    <aside class="sidebar">
+
+        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
+        <ul>
+        <h3>Categories</h3>
+        
+        <ul>
+            <li></li>
+        </ul>
+       
+        </ul>
+    </aside>
+</div> -->
 
 
 
     <div class="wrapper">
         <h1 class="title">CATEGORIES</h1>
+      
         <div class="categories">
-            <div class ="row">
+            <div class="row">
+            <?php foreach ($category->getCategories() as $category): ?>
+                <div class ="col-3">
+                    <a href="category.php?id=<?php echo $category['category_id']; ?>">
+                    <img src="<?php dirname(__FILE__); ?>assets/categories/<?php echo $category['category_image']; ?>" alt="" style="width:500px; height:100%">
+                    </a>
+
+                </div>
+                <?php endforeach; ?>
+            </div>
+           
+            <!-- <div class ="row">
                 <div class="col-3">
                     <img src="assets/images/cc/category-1.jpg" alt="pants">
                 </div>
@@ -63,7 +65,8 @@
                 <div class="col-3">
                     <img src="assets/images/cc/category-3.jpg" alt="shoes">
                 </div>
-            </div>
+            </div> -->
+
             
         </div>
     </div>
@@ -73,29 +76,33 @@
             <h1>VOLUME 1</h1><br><br>
             <p>GRAPHIC SHIRTS</p>
         </div>
+        <div class="row">
             <div class="row slider">
                 <?php foreach ($product->getProducts() as $product): ?>
                 <div class="col-4">
-                    <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
-                    <h4><?php echo $product['product_name']; ?></h4>
-                    <div class ="rating">
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="fa fa-star"></i>
-                        <i class="far fa-star"></i>
+                    <div class="prod-pic">
+                        <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
+                        <h4><?php echo $product['product_name']; ?></h4>
+                        <div class ="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                            <div class="price">
+                            <p>₱<?php echo $product['price']; ?></p>
+                            </div>
+                            <div>
+                                <a href="single-product.php?id=<?php echo $product['product_id']; ?>"><button >VIEW</button></a>
+                                <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
+                                
+                            </div>
                     </div>
-                        <div class="price">
-                        <p>₱<?php echo $product['price']; ?></p>
-                        </div>
-                        <div>
-                            <a href="single-product.php?id=<?php echo $product['product_id']; ?>"><button >VIEW</button></a>
-                            <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
-                            
-                        </div>
                 </div>
                 <?php endforeach; ?>
             </div>
+        </div>
     </div>
 </div>
 <script>

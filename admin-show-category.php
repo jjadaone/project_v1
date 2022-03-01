@@ -7,6 +7,7 @@
                                   <th>ID</th>
                                   <th>Category Name</th>
                                   <th>Category Description</th>
+                                  <th>Image</th>
                                 
                               </tr>
                             </thead>
@@ -17,6 +18,7 @@
                                 <th scope="row"><?php echo $category['category_id']; ?></th>
                                 <td><?php echo $category['category_name']; ?></td>
                                 <td><?php echo $category['category_description']; ?></td>
+                                <td><?php echo $category['category_image']; ?></td>
             
                                 <td>
                                   <a class="btn btn-info" href ="admin-update-category.php?id=<?php echo $category['category_id']; ?>">Update</a>

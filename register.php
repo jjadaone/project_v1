@@ -36,7 +36,7 @@
         </form>
         <p>ALREADY A MEMBER? <a href="login.php">SIGN IN</a></p>
     </div>
-</div>
+</main>
 </body>
 
 <?php
@@ -70,3 +70,4 @@
 
 
 ?>
+<?php include 'includes/footer.php'; ?>

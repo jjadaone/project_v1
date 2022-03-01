@@ -18,9 +18,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-
+    <link rel="stylesheet" type="text/css" href="assets/css/home.css">
     <link href ='assets/css/header2.css' type ='text/css' rel='stylesheet'/>
     <link href ='assets/css/input.css' type ='text/css' rel='stylesheet'/>
+    <link rel="stylesheet" type="text/css" href="assets/css/order-style.css">
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,7 +36,7 @@
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
             <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="/project_v1/index.php #about">About</a></li>
+                    <li><a href="about.php">About</a></li>
                     <!--<li><a href="#">Gallery</a></li>
                     <li><a href="#">Feedback</a></li>-->
                     <?php 
@@ -48,7 +49,9 @@
                                 session_destroy();
                                 header("location:index.php");
                             }
+                            echo '<li><a href="user-profile.php"class="fa fa-user" aria-hidden="true"></a></li>';
                             echo '<div><li><a href="cart.php"class="fa fa-shopping-cart"></a></li></div>';
+                            
                         } 
                     }
                     else {
