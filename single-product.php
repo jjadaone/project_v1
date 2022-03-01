@@ -30,7 +30,7 @@
                                     
                                     <div class="prod-buttons">
                                         <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button class="cart-btn">ADD TO CART</button></a>
-                                        <a href="index.php"><button>Back to Homepage</button></a>
+                                        <a href="index.php"><button>HOMEPAGE</button></a>
                                     </div>
                     </div>
             </div>
@@ -40,6 +40,10 @@
         </div>
     </div>
     <hr>
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
     <div class="reviews">
         <div class="container2">
             <div class="small-container2">

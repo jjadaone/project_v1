@@ -31,7 +31,11 @@
         <div class="d-flex" id="wrapper">
             <!-- Sidebar-->
             <div  class="border border-dark" id="sidebar-wrapper">
+<<<<<<< HEAD
                 <div class="sidebar-heading border-bottom bg-light"><img src="assets/images/cc/cc-logo-black.png" height="60px" alt="logo"></div>
+=======
+                <div class="sidebar-heading border-bottom bg-dark">  <img src="/project_v1/assets/images/cc/cc-logo-white.png" height="60px"></div>
+>>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
                     <div class="list-group list-group-flush ">
                     <a class="list-group-item list-group-item-action list-group-item-dark p-4" href="admin-index.php"><i class="fa fa-dashboard" style="font-size:30px;"></i> Dashboard</a>
                     <a class="list-group-item list-group-item-action list-group-item-light p-4" href="admin-show-orders.php"><i class='fas fa-shopping-bag' style='font-size:30px'></i></i>Orders</a>

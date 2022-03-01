@@ -3,7 +3,12 @@
     include 'includes/header2.php';
     
 ?>
+<<<<<<< HEAD
 <link rel="stylesheet" type="text/css" href="assets/css/about-stye.css">
+=======
+ <link rel="stylesheet" type="text/css" href="assets/css/home.css">
+
+>>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
 <div class="homepage">
     <div class="header">
         <div class="container-1">
