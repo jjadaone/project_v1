@@ -58,7 +58,7 @@
                             </div>
                             <div>
                                 <a href="single-product.php?id=<?php echo $product['product_id']; ?>"><button >VIEW</button></a>
-                                <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
+                                <a id="w" href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
                                 
                             </div>
                     </div>
@@ -126,4 +126,32 @@
   ]
 });
 </script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        <?php if($_SESSION['msg'] == 'Added to cart'): ?>
+        swal({
+            title: "<?php echo $_SESSION['msg']; ?>",
+            text: "...",
+            icon: "success",
+            button: "Ok",
+            timer: 2000
+        });
+        <?php unset($_SESSION['msg']); ?>
+
+        <?php elseif($_SESSION['msg'] == 'Quantity increased'): ?>
+        swal({
+            title: "<?php echo $_SESSION['msg']; ?>",
+            text: "...",
+            icon: "success",
+            button: "Ok",
+            timer: 2000
+        });
+        <?php unset($_SESSION['msg']); ?>
+        <?php endif; ?>
+        
+        
+    });
+</script>
+
 <?php include 'includes/footer.php'; ?>
