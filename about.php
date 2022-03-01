@@ -3,12 +3,7 @@
     include 'includes/header2.php';
     
 ?>
-<<<<<<< HEAD
-<link rel="stylesheet" type="text/css" href="assets/css/about-stye.css">
-=======
- <link rel="stylesheet" type="text/css" href="assets/css/home.css">
-
->>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
+<link rel="stylesheet" type="text/css" href="assets/css/about-style.css">
 <div class="homepage">
     <div class="header">
         <div class="container-1">
@@ -19,7 +14,7 @@
             <h1>WHO ARE WE?</h1>
             <p>Cloth Chasing Clothing is a clothing line retailer that has a product line of streeetwear graphic shirts, techwear clothes and accessories. We aim to bring international designs to the Philippines and collaborate it with local designs. 
                 Let’s chase trends together.</p>
-            <button type="button"><a href="#shop-now">SHOP NOW</a></button>
+            <button type="button"><a href="index.php #shop-now">SHOP NOW</a></button>
         </div>
     </div>
 </div>

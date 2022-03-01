@@ -96,6 +96,7 @@
                                             </div>
                                             <div class="col-sm-9">
                                                 <p class="text-muted mb-0"><?php echo $user['gender']; ?> </p>
+                                                
                                             </div>
                                         </div>
                                         <hr>

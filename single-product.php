@@ -40,10 +40,6 @@
         </div>
     </div>
     <hr>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
     <div class="reviews">
         <div class="container2">
             <div class="small-container2">

@@ -4,9 +4,9 @@
     
 ?>
 <link rel="stylesheet" type="text/css" href="assets/css/profile.css">
-    <div class="wrapper">
+    <div class="homepage">
         <div class="container">
-        <section style="background-color: #eee;">
+        <section>
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-4">
@@ -34,7 +34,6 @@
                             <i class="fa fa-edit"></i>
                             <p class="mb-0"><a  class ="btn btn-dark" href="user-profile-edit.php">EDIT PROFILE</a></p>
                             </li>
-<<<<<<< HEAD
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                                 <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
                                 <p class="mb-0">clothchasing</p>
@@ -43,8 +42,6 @@
                                 <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
                                 <p class="mb-0">clothchasing</p>
                             </li>
-=======
->>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
                             </ul>
                         </div>
                         </div>

@@ -2,6 +2,7 @@
     include 'includes/header2.php';
     include 'config/functions.php';
 ?>
+<link rel="stylesheet" type="text/css" href="assets/css/home.css">
 <div class="container" id="shop-now">
         <div class="title">
             <h1 >STREETWEAR</h1><br>
