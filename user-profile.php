@@ -34,23 +34,13 @@
                             <i class="fa fa-edit"></i>
                             <p class="mb-0"><a  class ="btn btn-dark" href="user-profile-edit.php">EDIT PROFILE</a></p>
                             </li>
-<<<<<<< HEAD
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                                <p class="mb-0">clothchasing</p>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                                <p class="mb-0">clothchasing</p>
-                            </li>
-=======
->>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
+    
                             </ul>
                         </div>
                         </div>
                     </div>
                 
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="row">
@@ -127,5 +117,3 @@
          }
      })
   </script>
-
-<?php include 'includes/footer.php'; ?>

@@ -45,14 +45,7 @@
                                     <i class="fa fa-edit"></i>
                                     <p class="mb-0"><a  class ="btn btn-dark" href="cart.php">EDIT PROFILE</a></p>
                                     </li>-->
-                                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                        <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                                        <p class="mb-0">clothchasing</p>
-                                    </li>
-                                    <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                        <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                                        <p class="mb-0">clothchasing</p>
-                                    </li>
+
                                     </ul>
                                 </div>
                                 </div>

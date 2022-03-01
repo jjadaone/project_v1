@@ -52,7 +52,7 @@
             $order->updateOrder($updateOrder);
 
             $cart->clearUserCart($_SESSION['id']);
-            header("Location: index.php");
+            header("Location: user-thank-you-page.php");
 
           }              
         }
@@ -86,7 +86,7 @@
             
               <li class="list-group-item d-flex justify-content-between">
                 <span>Total (USD)</span>
-                <strong>$<?php echo number_format($total,2);?></strong>
+                <strong>₱<?php echo number_format($total,2);?></strong>
               </li>
             </ul>
           </div>

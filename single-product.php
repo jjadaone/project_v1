@@ -40,10 +40,6 @@
         </div>
     </div>
     <hr>
-<<<<<<< HEAD
-=======
-    
->>>>>>> 76d39e56d07e4c23697197e84a04e8b2058e978b
     <div class="reviews">
         <div class="container2">
             <div class="small-container2">
@@ -62,7 +58,7 @@
                         <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
                         <div class="review">
                             <h5>
-                            <div class="rating">
+                            <div>
                                 <?php for($i=0; $i < $review['rating']; $i++) { ?>
                                     <i class="fa fa-star" <?php echo $i; ?>></i>
                                 <?php } ?>

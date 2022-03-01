@@ -5,7 +5,6 @@
 <link rel="stylesheet" type="text/css" href="assets/css/cart-shop.css">
 
 <div class="container">
-    
     <div class="cart-contain">
     <h1>CART</h1><br>
     <form action="update-cart.php" method="POST">
@@ -30,6 +29,11 @@
                     <td><input type="text" name="quantity[]" value="<?php echo $cart['cart_quantity']; ?>"></td>           
                     <td><?php echo $cart['total']; ?></td>
                     <td><a class="btn btn-danger" href="delete-cart.php?id=<?php echo $cart['cart_id']; ?>">Remove</a></td>
+                    <td>
+                    <div >
+                    <input class="btn btn-info btn-lg" type="submit" name="update" value="Update">
+                    </div>
+                    </td>
                 </tr>
                 <?php endforeach; ?>
                 <td>
@@ -40,11 +44,7 @@
                 </td>
                 <td>
                 </td>
-                <td>
-                    <div class="update-cart" >
-                    <input class="btn btn-info btn-lg float-right" type="submit" name="update" value="Update">
-                    </div>
-                </td>
+   
                 <td>
 
                 </td>
@@ -75,6 +75,3 @@
          }
      })
   </script>
-
-
-<?php include 'includes/footer.php'; ?>

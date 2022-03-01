@@ -57,11 +57,7 @@
                         </ul>
                         </div>
                     </div>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="#!">Status</a>
                     
-                    
-                   
-         
                 </div>
             </div>
             <!-- Page content wrapper-->
