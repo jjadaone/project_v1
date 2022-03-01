@@ -14,7 +14,7 @@
             <h1>WHO ARE WE?</h1>
             <p>Cloth Chasing Clothing is a clothing line retailer that has a product line of streeetwear graphic shirts, techwear clothes and accessories. We aim to bring international designs to the Philippines and collaborate it with local designs. 
                 Let’s chase trends together.</p>
-            <button type="button"><a href="index.php #shop-now">SHOP NOW</a></button>
+            <button type="button"><a href="index.php">SHOP NOW</a></button>
         </div>
     </div>
 </div>

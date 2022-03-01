@@ -52,7 +52,7 @@
             $order->updateOrder($updateOrder);
 
             $cart->clearUserCart($_SESSION['id']);
-            header("Location: user-thank-you-page.php");
+            header("Location: index.php");
 
           }              
         }

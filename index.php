@@ -44,7 +44,7 @@
                 <?php foreach ($product->getProducts() as $product): ?>
                 <div class="col-4">
                     <div class="prod-pic">
-                        <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="">
+                        <img src="<?php dirname(__FILE__); ?>assets/uploads/<?php echo $product['image']; ?>" alt="" style="width:300px">
                         <h4><?php echo $product['product_name']; ?></h4>
                         <div class ="rating">
                             <i class="fa fa-star"></i>
