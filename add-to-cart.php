@@ -8,7 +8,7 @@
         if ($cart->isCartItemExists($_SESSION['id'], $_GET['id'])) {
             $currentQuantity = $cart->getSingleCart($_SESSION['id'], $_GET['id'])[0]['cart_quantity'] + 1;
             $cart->updateQuantities($_GET['id'], $currentQuantity, $_SESSION['id']);
-            echo $currentQuantity;
+            $_SESSION['msg'] = 'Quantity increased';
             header("Location: index.php");
         } else {
             echo 'ssss';
@@ -23,6 +23,7 @@
 
                 // print_r($data);
                 $cart->addCart($data);
+                $_SESSION['msg'] = 'Added to cart'; //sweet alert     
                 header("Location: index.php");
             }
         }

@@ -47,7 +47,7 @@
                         </div>
                     </div>
                 
-                    <div class="col-lg-8">
+                    <div class="col-lg-6">
                         <div class="card mb-4">
                             <div class="card-body">
                                 <div class="row">
@@ -124,5 +124,3 @@
          }
      })
   </script>
-
-<?php include 'includes/footer.php'; ?>

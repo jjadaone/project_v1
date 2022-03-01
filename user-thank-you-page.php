@@ -1,43 +1,28 @@
 <?php 
     include 'config/functions.php';
-    include 'includes/header.php';
+    include 'includes/header2.php';
     
 ?>
+<link rel="stylesheet" type="text/css" href="assets/css/home.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 <div class="homepage">
     <div class="header">
         <div class="container">
             <div class="row">
-                <div class="col-2 header_container-image">
-                    <img src="assets/images/cc/home-cover.png" alt="img-cover">
+                <div>
+
+                <h1>Thank you for Shopping!</h1>
+    
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="wrapper">
-        <h1 class="title">CATEGORIES</h1>
-      
-        <div class="categories">
-            <div class="row">
-            <?php foreach ($category->getCategories() as $category): ?>
-                <div class ="col-3">
-                    <a href="category.php?id=<?php echo $category['category_id']; ?>">
-                    <img src="<?php dirname(__FILE__); ?>assets/categories/<?php echo $category['category_image']; ?>" alt="" style="width:500px; height:100%">
-                    </a>
-
-                </div>
-                <?php endforeach; ?>
-            </div>
-            
-        </div>
-    </div>
     <div class="container" id="shop-now">
         <div class="title">
             <h1 >STREETWEAR</h1><br>
-            <h1>VOLUME 1</h1><br><br>
-            <p>GRAPHIC SHIRTS</p>
+
         </div>
         <div class="row">
             <div class="row slider">
@@ -58,7 +43,7 @@
                             </div>
                             <div>
                                 <a href="single-product.php?id=<?php echo $product['product_id']; ?>"><button >VIEW</button></a>
-                                <a id="w" href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
+                                <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button><i  class="fa fa-shopping-cart"></i></button></a>
                                 
                             </div>
                     </div>
@@ -126,32 +111,4 @@
   ]
 });
 </script>
-
-<script type="text/javascript">
-    $(document).ready(function() {
-        <?php if($_SESSION['msg'] == 'Added to cart'): ?>
-        swal({
-            title: "<?php echo $_SESSION['msg']; ?>",
-            text: "...",
-            icon: "success",
-            button: "Ok",
-            timer: 2000
-        });
-        <?php unset($_SESSION['msg']); ?>
-
-        <?php elseif($_SESSION['msg'] == 'Quantity increased'): ?>
-        swal({
-            title: "<?php echo $_SESSION['msg']; ?>",
-            text: "...",
-            icon: "success",
-            button: "Ok",
-            timer: 2000
-        });
-        <?php unset($_SESSION['msg']); ?>
-        <?php endif; ?>
-        
-        
-    });
-</script>
-
 <?php include 'includes/footer.php'; ?>

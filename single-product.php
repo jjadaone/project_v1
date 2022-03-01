@@ -20,13 +20,7 @@
                         <h2>₱<?php echo $product['price']; ?></h2>
                         </div>
                         <p><?php echo $product['description']; ?></p>
-                            <div class ="rating">
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="fa fa-star"></i>
-                                <i class="far fa-star"></i>
-                            </div>
+                          
                                     
                                     <div class="prod-buttons">
                                         <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button class="cart-btn">ADD TO CART</button></a>
@@ -58,7 +52,7 @@
                         <?php foreach ($review->getReviews($_GET['id']) as $review): ?>
                         <div class="review">
                             <h5>
-                            <div class="rating">
+                            <div>
                                 <?php for($i=0; $i < $review['rating']; $i++) { ?>
                                     <i class="fa fa-star" <?php echo $i; ?>></i>
                                 <?php } ?>

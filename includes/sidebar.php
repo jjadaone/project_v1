@@ -57,11 +57,7 @@
                         </ul>
                         </div>
                     </div>
-                    <a class="list-group-item list-group-item-action list-group-item-light p-4" href="#!">Status</a>
                     
-                    
-                   
-         
                 </div>
             </div>
             <!-- Page content wrapper-->
@@ -77,7 +73,7 @@
                                 <?php 
                                     if ($_SESSION) {
                                         if ($_SESSION['id']) {
-                                            echo '<li  class="nav-item"><a class="nav-link" href="?action=logout">Logout</a></li>';
+                                            echo '<li  class="nav-item"><a class="nav-link" href="admin-index.php?action=logout">Logout</a></li>';
                                             if (isset($_GET['action'])) {
                                                 session_destroy();
                                                 header("location:index.php");
