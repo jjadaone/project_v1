@@ -30,7 +30,7 @@
                                     
                                     <div class="prod-buttons">
                                         <a href="add-to-cart.php?id=<?php echo $product['product_id']; ?>"><button class="cart-btn">ADD TO CART</button></a>
-                                        <a href="index.php"><button>Back to Homepage</button></a>
+                                        <a href="index.php"><button>HOMEPAGE</button></a>
                                     </div>
                     </div>
             </div>
@@ -40,7 +40,7 @@
         </div>
     </div>
     <hr>
-
+    
     <div class="reviews">
     <h2>CUSTOMER REVIEWS</h2>
     <?php if($_SESSION): ?>

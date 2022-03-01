@@ -4,16 +4,6 @@
     
 ?>
 
-<div class="homepage">
-    <div class="header">
-        <div class="container">
-            <div class="row">
-                <div class="col-2 header_container-image">
-                    <h1 class="title">ORDER DETAILS</h1>
-                </div>
-            </div>
-        </div>
-    </div>
     
     <div class="wrapper">
         <div class="container">

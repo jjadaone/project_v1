@@ -15,41 +15,6 @@
         </div>
     </div>
 
-    <div class="container-1">
-        <div class="aboutus_content-left">
-            <img src="assets/images/cc/about.png" alt="about us photo">
-        </div>
-        <div class="aboutus_content-right">
-            <h1>WHO ARE WE?</h1>
-            <p>Cloth Chasing Clothing is a clothing line retailer that has a product line of streeetwear graphic shirts, techwear clothes and accessories. We aim to bring international designs to the Philippines and collaborate it with local designs. 
-                Let’s chase trends together.</p>
-            <button type="button"><a href="#shop-now">SHOP NOW</a></button>
-        </div>"
-    </div>
-
-    
-<!-- <div>
-    <div class ="burger-sidebar">
-        <button onclick="openMenu()">
-                &#9776;
-                </button>
-    </div>
-    <aside class="sidebar">
-
-        <button class="sidebar-close-button" onclick="closeMenu()">x</button>
-        <ul>
-        <h3>Categories</h3>
-        
-        <ul>
-            <li></li>
-        </ul>
-       
-        </ul>
-    </aside>
-</div> -->
-
-
-
     <div class="wrapper">
         <h1 class="title">CATEGORIES</h1>
       
@@ -67,19 +32,6 @@
                 </div>
                 <?php endforeach; ?>
             </div>
-           
-            <!-- <div class ="row">
-                <div class="col-3">
-                    <img src="assets/images/cc/category-1.jpg" alt="pants">
-                </div>
-                <div class="col-3">
-                    <img src="assets/images/cc/category-2.jpg" alt="shirts">
-                </div>
-                <div class="col-3">
-                    <img src="assets/images/cc/category-3.jpg" alt="shoes">
-                </div>
-            </div> -->
-
             
         </div>
     </div>

@@ -3,7 +3,6 @@
     include 'includes/header2.php';
     
 ?>
-
 <div class="homepage">
     <div class="header">
         <div class="container">
@@ -14,7 +13,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="wrapper">
         <div class="container">
         <section style="background-color: #eee;">
@@ -44,14 +43,6 @@
                             <li class="list-group-item d-flex justify-content-between align-items-center p-3">
                             <i class="fa fa-edit"></i>
                             <p class="mb-0"><a  class ="btn btn-dark" href="user-profile-edit.php">EDIT PROFILE</a></p>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-instagram fa-lg" style="color: #ac2bac;"></i>
-                                <p class="mb-0">mdbootstrap</p>
-                            </li>
-                            <li class="list-group-item d-flex justify-content-between align-items-center p-3">
-                                <i class="fab fa-facebook-f fa-lg" style="color: #3b5998;"></i>
-                                <p class="mb-0">mdbootstrap</p>
                             </li>
                             </ul>
                         </div>

@@ -28,7 +28,7 @@
             <label for="click" class="menu-btn"><i class="fas fa-bars"></i></label>
                 <ul>
                     <li><a href="index.php">Home</a></li>
-                    <li><a href="#about">About</a></li>
+                    <li><a href="about.php">About</a></li>
                     <!--<li><a href="#">Gallery</a></li>
                     <li><a href="#">Feedback</a></li>-->
                     <?php 
